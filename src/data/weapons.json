@@ -1,0 +1,197 @@
+[
+  {
+    "id": "cursed_dual_katana",
+    "name": "Cursed Dual Katana",
+    "category": "Sword",
+    "tier": "S",
+    "tags": ["combo", "burst", "mobility"],
+    "synergies": {
+      "perfect": ["dough", "leopard", "shadow", "spirit"],
+      "good": ["dragon", "rumble", "portal"],
+      "acceptable": ["buddha", "venom", "control"],
+      "poor": ["ice", "sand", "blizzard"]
+    }
+  },
+  {
+    "id": "tushita",
+    "name": "Tushita",
+    "category": "Sword",
+    "tier": "S",
+    "tags": ["combo", "burst", "stun"],
+    "synergies": {
+      "perfect": ["buddha", "leopard", "dragon"],
+      "good": ["dough", "shadow", "venom"],
+      "acceptable": ["spirit", "control", "rumble"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "yama",
+    "name": "Yama",
+    "category": "Sword",
+    "tier": "S",
+    "tags": ["combo", "burst", "stun"],
+    "synergies": {
+      "perfect": ["buddha", "leopard", "dragon"],
+      "good": ["dough", "shadow", "venom"],
+      "acceptable": ["spirit", "control", "rumble"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "shisui",
+    "name": "Shisui",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "mobility"],
+    "synergies": {
+      "perfect": ["dough", "shadow"],
+      "good": ["leopard", "spirit", "rumble"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["ice", "barrier", "chop"]
+    }
+  },
+  {
+    "id": "saber",
+    "name": "Saber",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["burst", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber", "smoke"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "soul_guitar",
+    "name": "Soul Guitar",
+    "category": "Gun",
+    "tier": "S",
+    "tags": ["range", "sustain", "combo"],
+    "synergies": {
+      "perfect": ["venom", "shadow", "control"],
+      "good": ["dough", "spirit", "blizzard"],
+      "acceptable": ["buddha", "dragon", "ice"],
+      "poor": ["leopard", "rumble", "light"]
+    }
+  },
+  {
+    "id": "kabucha",
+    "name": "Kabucha",
+    "category": "Gun",
+    "tier": "A",
+    "tags": ["range", "aoe", "burst"],
+    "synergies": {
+      "perfect": ["blizzard", "control"],
+      "good": ["ice", "sand", "magma"],
+      "acceptable": ["dough", "shadow", "venom"],
+      "poor": ["buddha", "leopard", "dragon"]
+    }
+  },
+  {
+    "id": "acidum_rifle",
+    "name": "Acidum Rifle",
+    "category": "Gun",
+    "tier": "A",
+    "tags": ["range", "dot", "utility"],
+    "synergies": {
+      "perfect": ["venom", "blizzard"],
+      "good": ["control", "ice", "sand"],
+      "acceptable": ["dough", "shadow", "spirit"],
+      "poor": ["buddha", "leopard", "dragon"]
+    }
+  },
+  {
+    "id": "godhuman",
+    "name": "Godhuman",
+    "category": "Fighting Style",
+    "tier": "S",
+    "tags": ["combo", "burst", "stun"],
+    "synergies": {
+      "perfect": ["dough", "leopard", "shadow", "spirit"],
+      "good": ["dragon", "venom", "rumble", "portal"],
+      "acceptable": ["buddha", "control", "light"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "superhuman",
+    "name": "Superhuman",
+    "category": "Fighting Style",
+    "tier": "A",
+    "tags": ["combo", "burst", "beginner_friendly"],
+    "synergies": {
+      "perfect": ["buddha"],
+      "good": ["dough", "leopard", "dragon", "rubber"],
+      "acceptable": ["shadow", "venom", "spirit"],
+      "poor": ["ice", "sand", "smoke", "barrier"]
+    }
+  },
+  {
+    "id": "electric_claw",
+    "name": "Electric Claw",
+    "category": "Fighting Style",
+    "tier": "A",
+    "tags": ["mobility", "combo", "stun"],
+    "synergies": {
+      "perfect": ["buddha", "rumble"],
+      "good": ["dough", "light", "portal"],
+      "acceptable": ["leopard", "dragon", "shadow"],
+      "poor": ["ice", "sand", "barrier", "chop"]
+    }
+  },
+  {
+    "id": "dragon_talon",
+    "name": "Dragon Talon",
+    "category": "Fighting Style",
+    "tier": "S",
+    "tags": ["combo", "burst", "mobility"],
+    "synergies": {
+      "perfect": ["dough", "dragon", "spirit"],
+      "good": ["leopard", "shadow", "rumble"],
+      "acceptable": ["buddha", "venom", "control"],
+      "poor": ["ice", "sand", "smoke", "barrier"]
+    }
+  },
+  {
+    "id": "sharkman_karate",
+    "name": "Sharkman Karate",
+    "category": "Fighting Style",
+    "tier": "A",
+    "tags": ["combo", "aoe", "utility"],
+    "synergies": {
+      "perfect": ["buddha"],
+      "good": ["dough", "rubber", "quake"],
+      "acceptable": ["leopard", "dragon", "venom"],
+      "poor": ["ice", "sand", "smoke", "barrier"]
+    }
+  },
+  {
+    "id": "pole_v2",
+    "name": "Pole V2",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["aoe", "mobility", "farming"],
+    "synergies": {
+      "perfect": ["buddha"],
+      "good": ["dragon", "rubber", "quake"],
+      "acceptable": ["dough", "venom", "magma"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "dark_blade",
+    "name": "Dark Blade",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["burst", "combo", "range"],
+    "synergies": {
+      "perfect": ["shadow"],
+      "good": ["dough", "spirit", "control"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["leopard", "rumble", "light"]
+    }
+  }
+]
