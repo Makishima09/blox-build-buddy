@@ -1,0 +1,110 @@
+{
+  "pvp": {
+    "objective": "pvp",
+    "priorities": ["burst", "mobility", "combo_potential", "survivability"],
+    "recommendedBuilds": [
+      {
+        "tier": "S",
+        "fruit": "dough",
+        "weapon": "cursed_dual_katana",
+        "style": "godhuman",
+        "stats": [25, 25, 0, 0, 50],
+        "tags": ["meta", "high_skill"],
+        "reason": "Dough is the #1 PVP fruit with insane mobility, AoE, and combo potential. CDK and Godhuman maximize burst damage."
+      },
+      {
+        "tier": "S",
+        "fruit": "leopard",
+        "weapon": "tushita",
+        "style": "godhuman",
+        "stats": [30, 10, 0, 0, 60],
+        "tags": ["meta", "high_skill", "aggressive"],
+        "reason": "Leopard's speed and burst make it a top-tier duelist. Tushita adds stun for guaranteed combos."
+      },
+      {
+        "tier": "A",
+        "fruit": "buddha",
+        "weapon": "tushita",
+        "style": "superhuman",
+        "stats": [40, 30, 20, 0, 10],
+        "tags": ["beginner_friendly", "tanky"],
+        "reason": "Buddha is forgiving for beginners while still being viable. Great for learning PVP fundamentals."
+      },
+      {
+        "tier": "S",
+        "fruit": "shadow",
+        "weapon": "cursed_dual_katana",
+        "style": "godhuman",
+        "stats": [25, 15, 0, 0, 60],
+        "tags": ["combo", "technical"],
+        "reason": "Shadow's utility and combos make it deadly in skilled hands. CDK extends combo potential."
+      }
+    ]
+  },
+  "farm": {
+    "objective": "farm",
+    "priorities": ["aoe", "mobility", "sustain", "low_skill_floor"],
+    "recommendedBuilds": [
+      {
+        "tier": "S",
+        "fruit": "buddha",
+        "weapon": "pole_v2",
+        "style": "electric_claw",
+        "stats": [50, 20, 20, 0, 10],
+        "tags": ["best_farmer", "beginner_friendly"],
+        "reason": "Buddha's massive AoE + tankiness = fastest mob clearing. Pole V2 adds extra range."
+      },
+      {
+        "tier": "A",
+        "fruit": "dragon",
+        "weapon": "pole_v2",
+        "style": "superhuman",
+        "stats": [40, 30, 20, 0, 10],
+        "tags": ["tanky", "aoe"],
+        "reason": "Dragon's transformation provides great AoE and survivability for extended farming sessions."
+      },
+      {
+        "tier": "A",
+        "fruit": "dough",
+        "weapon": "shisui",
+        "style": "superhuman",
+        "stats": [30, 20, 0, 0, 50],
+        "tags": ["fast", "aoe"],
+        "reason": "Dough's awakened moves clear mobs quickly. Not as tanky as Buddha but faster."
+      }
+    ]
+  },
+  "boss": {
+    "objective": "boss",
+    "priorities": ["single_target", "survivability", "sustain", "positioning"],
+    "recommendedBuilds": [
+      {
+        "tier": "S",
+        "fruit": "venom",
+        "weapon": "soul_guitar",
+        "style": "godhuman",
+        "stats": [30, 30, 0, 0, 40],
+        "tags": ["dot", "sustain"],
+        "reason": "Venom's DoT melts boss HP while Soul Guitar provides healing. Perfect for long fights."
+      },
+      {
+        "tier": "S",
+        "fruit": "buddha",
+        "weapon": "tushita",
+        "style": "superhuman",
+        "stats": [40, 40, 10, 0, 10],
+        "tags": ["tanky", "consistent"],
+        "reason": "Buddha's tankiness makes boss fights much easier. Consistent damage output."
+      },
+      {
+        "tier": "A",
+        "fruit": "dragon",
+        "weapon": "tushita",
+        "style": "godhuman",
+        "stats": [30, 35, 0, 0, 35],
+        "tags": ["tanky", "burst"],
+        "reason": "Dragon's transformation provides both damage and survivability for boss encounters."
+      }
+    ]
+  }
+}
