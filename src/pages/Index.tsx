@@ -1,14 +1,23 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Swords, Wrench, TrendingUp, Users } from 'lucide-react';
+import { Swords, Wrench } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { LanguageToggle } from '@/components/shared/LanguageToggle';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background bg-hero-pattern">
+      {/* Top Bar */}
+      <div className="container flex justify-end py-4">
+        <LanguageToggle />
+      </div>
+
       {/* Hero Section */}
-      <header className="container pt-16 pb-12 text-center">
+      <header className="container pt-8 pb-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -20,7 +29,7 @@ const Index = () => {
             <span className="text-foreground">COMPANION</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Know your odds before you fight. Optimize your build in seconds, not hours.
+            {t('hero.subtitle')}
           </p>
         </motion.div>
 
@@ -34,13 +43,13 @@ const Index = () => {
           <Button asChild variant="hero" size="xl">
             <Link to="/simulator">
               <Swords className="w-5 h-5" />
-              Simulate PVP
+              {t('cta.simulate')}
             </Link>
           </Button>
           <Button asChild variant="outline" size="xl">
             <Link to="/optimizer">
               <Wrench className="w-5 h-5" />
-              Optimize Build
+              {t('cta.optimize')}
             </Link>
           </Button>
         </motion.div>
@@ -57,10 +66,8 @@ const Index = () => {
               <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-2">
                 <Swords className="w-6 h-6 text-primary" />
               </div>
-              <CardTitle>PVP Matchup Simulator</CardTitle>
-              <CardDescription>
-                Enter your build and your rival's to get instant matchup analysis with win probability, strengths, and counter strategies.
-              </CardDescription>
+              <CardTitle>{t('feature.simulator.title')}</CardTitle>
+              <CardDescription>{t('feature.simulator.desc')}</CardDescription>
             </CardHeader>
           </Card>
 
@@ -69,10 +76,8 @@ const Index = () => {
               <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-2">
                 <Wrench className="w-6 h-6 text-accent" />
               </div>
-              <CardTitle>Build Optimizer</CardTitle>
-              <CardDescription>
-                Tell us your goal (PVP, Farming, or Boss) and get a personalized upgrade path with the best fruit, weapon, and stats.
-              </CardDescription>
+              <CardTitle>{t('feature.optimizer.title')}</CardTitle>
+              <CardDescription>{t('feature.optimizer.desc')}</CardDescription>
             </CardHeader>
           </Card>
         </motion.div>
@@ -86,24 +91,22 @@ const Index = () => {
         >
           <div>
             <p className="text-3xl font-display font-bold text-primary">20+</p>
-            <p className="text-sm text-muted-foreground">Fruits</p>
+            <p className="text-sm text-muted-foreground">{t('stats.fruits')}</p>
           </div>
           <div>
             <p className="text-3xl font-display font-bold text-accent">15+</p>
-            <p className="text-sm text-muted-foreground">Weapons</p>
+            <p className="text-sm text-muted-foreground">{t('stats.weapons')}</p>
           </div>
           <div>
             <p className="text-3xl font-display font-bold text-success">100%</p>
-            <p className="text-sm text-muted-foreground">Free</p>
+            <p className="text-sm text-muted-foreground">{t('stats.free')}</p>
           </div>
         </motion.div>
       </header>
 
       {/* Footer */}
       <footer className="container py-8 text-center border-t border-border/50">
-        <p className="text-sm text-muted-foreground">
-          Fan-made tool. Not affiliated with Blox Fruits or Roblox.
-        </p>
+        <p className="text-sm text-muted-foreground">{t('footer.disclaimer')}</p>
       </footer>
     </div>
   );
