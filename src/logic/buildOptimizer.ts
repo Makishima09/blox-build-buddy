@@ -20,7 +20,8 @@ interface PresetData {
 
 const presets = presetsData as Record<string, PresetData>;
 
-export function optimizeBuild(input: OptimizerInput): OptimizerResult {
+export function optimizeBuild(input: OptimizerInput, t?: (key: string) => string): OptimizerResult {
+  const translate = t || ((key: string) => key);
   const { objective, currentBuild, constraints } = input;
   const preset = presets[objective];
   
@@ -53,7 +54,7 @@ export function optimizeBuild(input: OptimizerInput): OptimizerResult {
         style: bestStyle?.id || 'godhuman',
         stats: fruit?.optimalStats.distribution || [25, 25, 0, 0, 50],
         tags: ['custom'],
-        reason: `Optimized build for ${fruit?.name || currentBuild.fruit} focusing on ${objective}`
+        reason: translate('optimizer.optimized_for').replace('{name}', fruit?.name || currentBuild.fruit).replace('{objective}', translate(`optimizer.${objective}`))
       }];
     }
   }
@@ -79,8 +80,8 @@ export function optimizeBuild(input: OptimizerInput): OptimizerResult {
   
   const alternatives = recommendedBuilds.slice(1, 3).map((build, idx) => ({
     scenario: idx === 0 
-      ? `If you can't get ${getFruitById(targetBuild.fruit)?.name || targetBuild.fruit}...`
-      : 'Another solid option...',
+      ? translate('optimizer.if_cant_get').replace('{name}', getFruitById(targetBuild.fruit)?.name || targetBuild.fruit)
+      : translate('optimizer.another_option'),
     build: {
       tier: build.tier as 'S' | 'A' | 'B' | 'C',
       fruit: build.fruit,
@@ -90,24 +91,26 @@ export function optimizeBuild(input: OptimizerInput): OptimizerResult {
       tags: build.tags,
       reason: build.reason
     },
-    tradeoffs: compareBuilds(targetBuildData, build)
+    tradeoffs: compareBuilds(targetBuildData, build, translate)
   }));
   
   // Generate upgrade path
-  const upgradePath = generateUpgradePath(currentBuild, targetBuild, objective);
+  const upgradePath = generateUpgradePath(currentBuild, targetBuild, objective, translate);
   
   // Generate justification
   const justification = [
     targetBuild.reason,
-    `This build prioritizes: ${preset.priorities.slice(0, 3).join(', ')}`,
-    `Tier ${targetBuild.tier} build - ${targetBuild.tier === 'S' ? 'Top meta choice' : 'Strong and reliable'}`
+    translate('optimizer.build_prioritizes').replace('{priorities}', preset.priorities.slice(0, 3).join(', ')),
+    targetBuild.tier === 'S' 
+      ? translate('optimizer.tier_meta').replace('{tier}', targetBuild.tier)
+      : translate('optimizer.tier_reliable').replace('{tier}', targetBuild.tier)
   ];
   
   // Expected improvement
   const improvements: Record<string, { metric: string; change: string }> = {
-    pvp: { metric: 'Win Rate', change: '+30-50% in ranked matches' },
-    farm: { metric: 'Clear Speed', change: '+40% faster mob clearing' },
-    boss: { metric: 'Boss Kill Time', change: '-30% time per boss' }
+    pvp: { metric: translate('optimizer.win_rate'), change: translate('optimizer.improvement_pvp') },
+    farm: { metric: translate('optimizer.clear_speed'), change: translate('optimizer.improvement_farm') },
+    boss: { metric: translate('optimizer.boss_kill_time'), change: translate('optimizer.improvement_boss') }
   };
   
   return {
@@ -119,33 +122,38 @@ export function optimizeBuild(input: OptimizerInput): OptimizerResult {
   };
 }
 
-function compareBuilds(a: RecommendedBuildData, b: RecommendedBuildData): string {
+function compareBuilds(a: RecommendedBuildData, b: RecommendedBuildData, t?: (key: string) => string): string {
+  const translate = t || ((key: string) => key);
   const aFruit = getFruitById(a.fruit);
   const bFruit = getFruitById(b.fruit);
   
-  if (!aFruit || !bFruit) return 'Similar performance expected';
+  if (!aFruit || !bFruit) return translate('optimizer.similar_performance');
   
   const tierDiff = ['S', 'A', 'B', 'C'].indexOf(a.tier) - ['S', 'A', 'B', 'C'].indexOf(b.tier);
   
   if (tierDiff < 0) {
-    return `Slightly lower tier but ${b.tags.includes('beginner_friendly') ? 'easier to use' : 'still very effective'}`;
+    return b.tags.includes('beginner_friendly') 
+      ? translate('optimizer.lower_tier_easier')
+      : translate('optimizer.lower_tier_effective');
   }
   
   const aHasMobility = aFruit.tags.includes('mobility');
   const bHasMobility = bFruit.tags.includes('mobility');
   
   if (aHasMobility && !bHasMobility) {
-    return 'Less mobile but potentially more damage';
+    return translate('optimizer.less_mobile');
   }
   
-  return 'Alternative playstyle with similar effectiveness';
+  return translate('optimizer.alternative_playstyle');
 }
 
 function generateUpgradePath(
   current: OptimizerInput['currentBuild'],
   target: { fruit: string; weapon: string; style: string },
-  objective: string
+  objective: string,
+  t?: (key: string) => string
 ): UpgradeStep[] {
+  const translate = t || ((key: string) => key);
   const steps: UpgradeStep[] = [];
   let stepNum = 1;
   
@@ -154,22 +162,23 @@ function generateUpgradePath(
     const targetFruit = getFruitById(target.fruit);
     steps.push({
       step: stepNum++,
-      action: `Obtain ${targetFruit?.name || target.fruit}`,
+      action: translate('optimizer.obtain').replace('{name}', targetFruit?.name || target.fruit),
       priority: 'critical',
-      estimatedTime: '1-2 weeks (trading/hunting)',
-      reason: `${targetFruit?.name || target.fruit} is the core of this ${objective} build`
+      estimatedTime: translate('optimizer.time_trading'),
+      reason: translate('optimizer.reason_core').replace('{name}', targetFruit?.name || target.fruit).replace('{objective}', translate(`optimizer.${objective}`))
     });
   }
   
   // Weapon change
   if (current.weapon !== target.weapon) {
     const targetWeapon = getWeaponById(target.weapon);
+    const synergyType = objective === 'pvp' ? 'burst' : objective === 'farm' ? 'aoe' : 'dps';
     steps.push({
       step: stepNum++,
-      action: `Get ${targetWeapon?.name || target.weapon}`,
+      action: translate('optimizer.get').replace('{name}', targetWeapon?.name || target.weapon),
       priority: 'high',
-      estimatedTime: '3-7 days',
-      reason: `Perfect synergy with your fruit for maximum ${objective === 'pvp' ? 'burst' : objective === 'farm' ? 'AoE' : 'DPS'}`
+      estimatedTime: translate('optimizer.time_days'),
+      reason: translate('optimizer.reason_synergy').replace('{type}', translate(`optimizer.${synergyType}`))
     });
   }
   
@@ -178,20 +187,20 @@ function generateUpgradePath(
     const targetStyle = getWeaponById(target.style);
     steps.push({
       step: stepNum++,
-      action: `Unlock ${targetStyle?.name || target.style}`,
+      action: translate('optimizer.unlock').replace('{name}', targetStyle?.name || target.style),
       priority: 'high',
-      estimatedTime: '1-2 weeks',
-      reason: 'Completes your build\'s combo potential'
+      estimatedTime: translate('optimizer.time_weeks'),
+      reason: translate('optimizer.reason_combo')
     });
   }
   
   // Stats respec
   steps.push({
     step: stepNum++,
-    action: 'Respec stats to optimal distribution',
+    action: translate('optimizer.respec_stats'),
     priority: 'high',
-    estimatedTime: 'Instant (requires stat reset)',
-    reason: 'Optimized stat distribution for your build'
+    estimatedTime: translate('optimizer.time_instant'),
+    reason: translate('optimizer.reason_stats')
   });
   
   // Mastery
@@ -199,10 +208,10 @@ function generateUpgradePath(
   if (targetFruit) {
     steps.push({
       step: stepNum++,
-      action: `Max ${targetFruit.name} mastery to 600`,
+      action: translate('optimizer.max_mastery').replace('{name}', targetFruit.name),
       priority: 'medium',
-      estimatedTime: '2-4 weeks of grinding',
-      reason: 'Unlock all moves and maximize damage'
+      estimatedTime: translate('optimizer.time_grinding'),
+      reason: translate('optimizer.reason_mastery')
     });
   }
   
@@ -210,10 +219,10 @@ function generateUpgradePath(
   if (targetFruit?.tags.includes('awakened')) {
     steps.push({
       step: stepNum++,
-      action: `Awaken ${targetFruit.name} (complete raid)`,
+      action: translate('optimizer.awaken').replace('{name}', targetFruit.name),
       priority: 'medium',
-      estimatedTime: '1-2 weeks',
-      reason: 'Awakened moves are significantly stronger'
+      estimatedTime: translate('optimizer.time_weeks'),
+      reason: translate('optimizer.reason_awakened')
     });
   }
   

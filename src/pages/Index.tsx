@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Swords, Wrench } from 'lucide-react';
+import { Swords, Wrench, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { LanguageToggle } from '@/components/shared/LanguageToggle';
@@ -52,6 +52,12 @@ const Index = () => {
               {t('cta.optimize')}
             </Link>
           </Button>
+          <Button asChild variant="outline" size="xl">
+            <Link to="/fruits">
+              <BookOpen className="w-5 h-5" />
+              {t('cta.fruits')}
+            </Link>
+          </Button>
         </motion.div>
 
         {/* Feature Cards */}
@@ -59,7 +65,7 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+          className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto"
         >
           <Card className="text-left hover:border-primary/50 transition-all duration-300 hover:glow-primary">
             <CardHeader>
@@ -78,6 +84,16 @@ const Index = () => {
               </div>
               <CardTitle>{t('feature.optimizer.title')}</CardTitle>
               <CardDescription>{t('feature.optimizer.desc')}</CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="text-left hover:border-success/50 transition-all duration-300 hover:glow-success">
+            <CardHeader>
+              <div className="w-12 h-12 rounded-lg bg-success/20 flex items-center justify-center mb-2">
+                <BookOpen className="w-6 h-6 text-success" />
+              </div>
+              <CardTitle>{t('feature.fruits.title')}</CardTitle>
+              <CardDescription>{t('feature.fruits.desc')}</CardDescription>
             </CardHeader>
           </Card>
         </motion.div>

@@ -40,6 +40,7 @@ export interface Build {
   level: number;
   fruit: string;
   weapon: string;
+  gun?: string;
   fightingStyle: string;
   statFocus: 'balanced' | 'melee' | 'fruit' | 'defense';
   playstyle?: 'aggressive' | 'zoner' | 'hitandrun' | 'tank';

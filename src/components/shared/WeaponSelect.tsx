@@ -40,6 +40,11 @@ export function WeaponSelect({
     return weapons.filter(w => w.category === category);
   }, [category]);
 
+  const getTierOrder = (tier: string): number => {
+    const order: Record<string, number> = { 'S': 0, 'A': 1, 'B': 2, 'C': 3 };
+    return order[tier] ?? 4;
+  };
+
   const groupedWeapons = useMemo(() => {
     const groups: Record<string, Weapon[]> = {};
     filteredWeapons.forEach((weapon) => {
@@ -47,6 +52,14 @@ export function WeaponSelect({
         groups[weapon.category] = [];
       }
       groups[weapon.category].push(weapon);
+    });
+    // Ordenar cada grupo por tier (S > A > B > C)
+    Object.keys(groups).forEach((category) => {
+      groups[category].sort((a, b) => {
+        const tierDiff = getTierOrder(a.tier) - getTierOrder(b.tier);
+        if (tierDiff !== 0) return tierDiff;
+        return a.name.localeCompare(b.name);
+      });
     });
     return groups;
   }, [filteredWeapons]);

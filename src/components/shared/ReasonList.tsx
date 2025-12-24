@@ -2,12 +2,14 @@ import { motion } from 'framer-motion';
 import { CheckCircle, XCircle, MinusCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Reason } from '@/types';
+import { useLanguage } from '@/hooks/useLanguage';
 
 interface ReasonListProps {
   reasons: Reason[];
 }
 
 export function ReasonList({ reasons }: ReasonListProps) {
+  const { t } = useLanguage();
   const getIcon = (type: Reason['type']) => {
     switch (type) {
       case 'advantage':
@@ -47,7 +49,7 @@ export function ReasonList({ reasons }: ReasonListProps) {
           <div className="flex-1">
             <p className="text-sm">{reason.text}</p>
             <span className="text-xs text-muted-foreground">
-              Impact: {reason.impact > 0 ? '+' : ''}{reason.impact}
+              {t('counter.impact')}: {reason.impact > 0 ? '+' : ''}{reason.impact}
             </span>
           </div>
         </motion.div>

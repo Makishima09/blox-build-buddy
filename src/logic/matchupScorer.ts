@@ -16,12 +16,15 @@ export function getWeaponById(id: string): Weapon | undefined {
   return weapons.find(w => w.id === id);
 }
 
-function findMatchupAdvantage(fruit1: string, fruit2: string): { advantage: number; reason: string } | null {
+function findMatchupAdvantage(fruit1: string, fruit2: string, t?: (key: string) => string): { advantage: number; reason: string } | null {
+  const translate = t || ((key: string) => key);
   const direct = matchups.find(m => m.fruit1 === fruit1 && m.fruit2 === fruit2);
   if (direct) return { advantage: direct.advantage, reason: direct.reason };
   
   const reverse = matchups.find(m => m.fruit1 === fruit2 && m.fruit2 === fruit1);
-  if (reverse) return { advantage: -reverse.advantage, reason: `Opponent: ${reverse.reason}` };
+  if (reverse) {
+    return { advantage: -reverse.advantage, reason: `${translate('reason.opponent')}: ${reverse.reason}` };
+  }
   
   return null;
 }
@@ -60,7 +63,8 @@ function getTierValue(tier: string): number {
   return tiers[tier] || 0;
 }
 
-export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResult {
+export function calculateMatchup(myBuild: Build, rivalBuild: Build, t?: (key: string) => string): MatchupResult {
+  const translate = t || ((key: string) => key);
   let score = 50;
   const breakdown: ScoreBreakdown = {
     fruitAdvantage: 0,
@@ -78,7 +82,7 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
   const reasons: Reason[] = [];
   
   // 1. Fruit advantage (weight: 40%)
-  const fruitMatchup = findMatchupAdvantage(myBuild.fruit, rivalBuild.fruit);
+  const fruitMatchup = findMatchupAdvantage(myBuild.fruit, rivalBuild.fruit, translate);
   if (fruitMatchup) {
     breakdown.fruitAdvantage = fruitMatchup.advantage;
     reasons.push({
@@ -92,7 +96,7 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
     if (tierDiff !== 0) {
       reasons.push({
         type: tierDiff > 0 ? 'advantage' : 'disadvantage',
-        text: `${myFruit.name} is ${tierDiff > 0 ? 'higher' : 'lower'} tier than ${rivalFruit.name}`,
+        text: `${myFruit.name} ${tierDiff > 0 ? translate('reason.tier_higher') : translate('reason.tier_lower')} ${rivalFruit.name}`,
         impact: Math.abs(tierDiff * 5)
       });
     }
@@ -105,13 +109,13 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
     if (breakdown.weaponSynergy >= 8) {
       reasons.push({
         type: 'advantage',
-        text: `${myWeapon.name} has perfect synergy with ${myFruit.name}`,
+        text: `${myWeapon.name} ${translate('reason.perfect_synergy')} ${myFruit.name}`,
         impact: breakdown.weaponSynergy
       });
     } else if (breakdown.weaponSynergy < 0) {
       reasons.push({
         type: 'disadvantage',
-        text: `${myWeapon.name} doesn't synergize well with ${myFruit.name}`,
+        text: `${myWeapon.name} ${translate('reason.poor_synergy')} ${myFruit.name}`,
         impact: Math.abs(breakdown.weaponSynergy)
       });
     }
@@ -124,13 +128,13 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
     if (breakdown.styleSynergy >= 8) {
       reasons.push({
         type: 'advantage',
-        text: `${myStyle.name} maximizes ${myFruit.name}'s combo potential`,
+        text: `${myStyle.name} ${translate('reason.maximizes_combo').replace('{name}', myFruit.name)}`,
         impact: breakdown.styleSynergy
       });
     } else if (breakdown.styleSynergy < 0) {
       reasons.push({
         type: 'disadvantage',
-        text: `Consider a fighting style that better complements ${myFruit.name}`,
+        text: `${translate('reason.better_style')} ${myFruit.name}`,
         impact: Math.abs(breakdown.styleSynergy)
       });
     }
@@ -142,13 +146,13 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
   if (breakdown.statMatch > 5) {
     reasons.push({
       type: 'advantage',
-      text: `Your stat distribution is optimal for ${myFruit?.name || 'your fruit'}`,
+      text: `${translate('reason.optimal_stats')} ${myFruit?.name || translate('reason.your_fruit')}`,
       impact: breakdown.statMatch
     });
   } else if (breakdown.statMatch < 0) {
     reasons.push({
       type: 'disadvantage',
-      text: `Your stats aren't optimized for your build`,
+      text: translate('reason.stats_not_optimized'),
       impact: Math.abs(breakdown.statMatch)
     });
   }
@@ -160,7 +164,7 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
   if (Math.abs(breakdown.levelDiff) > 3) {
     reasons.push({
       type: breakdown.levelDiff > 0 ? 'advantage' : 'disadvantage',
-      text: `Level ${breakdown.levelDiff > 0 ? 'advantage' : 'disadvantage'} (${Math.abs(myBuild.level - rivalBuild.level)} levels)`,
+      text: `${breakdown.levelDiff > 0 ? translate('reason.level_advantage') : translate('reason.level_disadvantage')} (${Math.abs(myBuild.level - rivalBuild.level)} ${translate('reason.levels')})`,
       impact: Math.abs(breakdown.levelDiff)
     });
   }
@@ -180,7 +184,7 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
     betterFruits.forEach(bf => {
       counters.push({
         type: 'fruit',
-        suggestion: `Switch to ${bf.name} for better matchup`,
+        suggestion: translate('counter.switch_fruit').replace('{name}', bf.name),
         expectedImprovement: 15,
         priority: 'high'
       });
@@ -195,7 +199,7 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
     betterWeapons.forEach(bw => {
       counters.push({
         type: 'weapon',
-        suggestion: `Try ${bw.name} for better synergy`,
+        suggestion: translate('counter.try_weapon').replace('{name}', bw.name),
         expectedImprovement: 8,
         priority: 'medium'
       });
@@ -211,7 +215,7 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
     betterStyles.forEach(bs => {
       counters.push({
         type: 'style',
-        suggestion: `Switch to ${bs.name} fighting style`,
+        suggestion: translate('counter.switch_style').replace('{name}', bs.name),
         expectedImprovement: 6,
         priority: 'medium'
       });
@@ -219,9 +223,11 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
   }
   
   if (breakdown.statMatch < 0 && myFruit) {
+    const statKey = myFruit.optimalStats.primary === 'melee' ? 'melee' : 
+                    myFruit.optimalStats.primary === 'defense' ? 'defense' : 'fruit';
     counters.push({
       type: 'stat',
-      suggestion: `Respec stats to focus on ${myFruit.optimalStats.primary}`,
+      suggestion: translate('counter.respec_stats').replace('{stat}', translate(statKey)),
       expectedImprovement: 5,
       priority: 'medium'
     });
@@ -233,35 +239,35 @@ export function calculateMatchup(myBuild: Build, rivalBuild: Build): MatchupResu
   if (myFruit?.tags.includes('mobility')) {
     tips.push({
       category: 'positioning',
-      text: 'Use your mobility to control engagement distance'
+      text: translate('tip.mobility')
     });
   }
   
   if (rivalFruit?.tags.includes('zoning')) {
     tips.push({
       category: 'positioning',
-      text: "Close the gap quickly - don't let them set up their zoning"
+      text: translate('tip.zoning')
     });
   }
   
   if (myFruit?.tags.includes('combo')) {
     tips.push({
       category: 'combo',
-      text: 'Land your full combo before they can recover'
+      text: translate('tip.combo_full')
     });
   }
   
   if (myFruit?.tags.includes('burst')) {
     tips.push({
       category: 'timing',
-      text: "Wait for their cooldowns before going all-in"
+      text: translate('tip.burst')
     });
   }
   
   if (rivalFruit?.tags.includes('tankiness')) {
     tips.push({
       category: 'resource',
-      text: "Don't overcommit - it's a marathon, not a sprint"
+      text: translate('tip.tankiness')
     });
   }
   

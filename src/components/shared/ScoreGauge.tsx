@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/hooks/useLanguage';
 
 interface ScoreGaugeProps {
   score: number;
@@ -9,10 +10,12 @@ interface ScoreGaugeProps {
 }
 
 export function ScoreGauge({ score, size = 'md', showLabel = true, animated = true }: ScoreGaugeProps) {
+  const { t } = useLanguage();
+  
   const getVerdict = () => {
-    if (score >= 60) return { label: 'FAVORABLE', color: 'text-success', bgColor: 'bg-success', glowClass: 'glow-success' };
-    if (score >= 40) return { label: 'NEUTRAL', color: 'text-warning', bgColor: 'bg-warning', glowClass: 'glow-accent' };
-    return { label: 'UNFAVORABLE', color: 'text-destructive', bgColor: 'bg-destructive', glowClass: 'glow-destructive' };
+    if (score >= 60) return { label: t('favorable'), color: 'text-success', bgColor: 'bg-success', glowClass: 'glow-success' };
+    if (score >= 40) return { label: t('neutral'), color: 'text-warning', bgColor: 'bg-warning', glowClass: 'glow-accent' };
+    return { label: t('unfavorable'), color: 'text-destructive', bgColor: 'bg-destructive', glowClass: 'glow-destructive' };
   };
 
   const verdict = getVerdict();

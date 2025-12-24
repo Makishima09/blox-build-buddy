@@ -104,6 +104,162 @@
     }
   },
   {
+    "id": "skull_guitar",
+    "name": "Skull Guitar",
+    "category": "Gun",
+    "tier": "S",
+    "tags": ["range", "aoe", "explosive"],
+    "synergies": {
+      "perfect": ["venom", "shadow", "control"],
+      "good": ["dough", "spirit", "blizzard"],
+      "acceptable": ["buddha", "dragon", "ice"],
+      "poor": ["leopard", "rumble", "light"]
+    }
+  },
+  {
+    "id": "dragonstorm",
+    "name": "Dragonstorm",
+    "category": "Gun",
+    "tier": "A",
+    "tags": ["range", "aoe", "burst"],
+    "synergies": {
+      "perfect": ["dragon", "blizzard"],
+      "good": ["dough", "control", "ice"],
+      "acceptable": ["buddha", "shadow", "venom"],
+      "poor": ["leopard", "rumble", "light"]
+    }
+  },
+  {
+    "id": "bazooka",
+    "name": "Bazooka",
+    "category": "Gun",
+    "tier": "A",
+    "tags": ["range", "aoe", "explosive"],
+    "synergies": {
+      "perfect": ["blizzard", "control"],
+      "good": ["ice", "sand", "magma"],
+      "acceptable": ["dough", "shadow", "venom"],
+      "poor": ["buddha", "leopard", "dragon"]
+    }
+  },
+  {
+    "id": "refined_musket",
+    "name": "Refined Musket",
+    "category": "Gun",
+    "tier": "A",
+    "tags": ["range", "burst", "precision"],
+    "synergies": {
+      "perfect": ["blizzard", "control"],
+      "good": ["ice", "sand", "magma"],
+      "acceptable": ["dough", "shadow", "venom"],
+      "poor": ["buddha", "leopard", "dragon"]
+    }
+  },
+  {
+    "id": "bizarre_rifle",
+    "name": "Bizarre Rifle",
+    "category": "Gun",
+    "tier": "B",
+    "tags": ["range", "utility", "combo"],
+    "synergies": {
+      "perfect": [],
+      "good": ["blizzard", "control", "ice"],
+      "acceptable": ["dough", "shadow", "venom"],
+      "poor": ["buddha", "leopard", "dragon"]
+    }
+  },
+  {
+    "id": "serpent_bow",
+    "name": "Serpent Bow",
+    "category": "Gun",
+    "tier": "B",
+    "tags": ["range", "dot", "precision"],
+    "synergies": {
+      "perfect": ["venom"],
+      "good": ["blizzard", "control", "ice"],
+      "acceptable": ["dough", "shadow", "spirit"],
+      "poor": ["buddha", "leopard", "dragon"]
+    }
+  },
+  {
+    "id": "refined_flintlock",
+    "name": "Refined Flintlock",
+    "category": "Gun",
+    "tier": "B",
+    "tags": ["range", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["blizzard", "ice", "sand"],
+      "acceptable": ["dough", "shadow", "venom"],
+      "poor": ["buddha", "leopard", "dragon"]
+    }
+  },
+  {
+    "id": "refined_slingshot",
+    "name": "Refined Slingshot",
+    "category": "Gun",
+    "tier": "B",
+    "tags": ["range", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["blizzard", "ice", "sand"],
+      "acceptable": ["dough", "shadow", "venom"],
+      "poor": ["buddha", "leopard", "dragon"]
+    }
+  },
+  {
+    "id": "slingshot",
+    "name": "Slingshot",
+    "category": "Gun",
+    "tier": "B",
+    "tags": ["range", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": [],
+      "acceptable": ["blizzard", "ice", "sand"],
+      "poor": ["dough", "buddha", "leopard"]
+    }
+  },
+  {
+    "id": "musket",
+    "name": "Musket",
+    "category": "Gun",
+    "tier": "C",
+    "tags": ["range", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": [],
+      "acceptable": ["blizzard", "ice", "sand"],
+      "poor": ["dough", "buddha", "leopard"]
+    }
+  },
+  {
+    "id": "flintlock",
+    "name": "Flintlock",
+    "category": "Gun",
+    "tier": "C",
+    "tags": ["range", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": [],
+      "acceptable": ["blizzard", "ice", "sand"],
+      "poor": ["dough", "buddha", "leopard"]
+    }
+  },
+  {
+    "id": "cannon",
+    "name": "Cannon",
+    "category": "Gun",
+    "tier": "C",
+    "tags": ["range", "aoe", "explosive", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": [],
+      "acceptable": ["blizzard", "ice", "sand"],
+      "poor": ["dough", "buddha", "leopard"]
+    }
+  },
+  {
     "id": "godhuman",
     "name": "Godhuman",
     "category": "Fighting Style",
@@ -192,6 +348,422 @@
       "good": ["dough", "spirit", "control"],
       "acceptable": ["buddha", "dragon", "venom"],
       "poor": ["leopard", "rumble", "light"]
+    }
+  },
+  {
+    "id": "rengoku",
+    "name": "Rengoku",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "farming"],
+    "synergies": {
+      "perfect": ["buddha", "dragon"],
+      "good": ["dough", "venom", "magma"],
+      "acceptable": ["leopard", "shadow", "rubber"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "midnight_blade",
+    "name": "Midnight Blade",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "burst", "stun"],
+    "synergies": {
+      "perfect": ["shadow", "dough"],
+      "good": ["leopard", "spirit", "control"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["ice", "sand", "barrier"]
+    }
+  },
+  {
+    "id": "true_triple_katana",
+    "name": "True Triple Katana",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "mobility"],
+    "synergies": {
+      "perfect": ["dough", "shadow"],
+      "good": ["leopard", "spirit", "rumble"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "hallow_scythe",
+    "name": "Hallow Scythe",
+    "category": "Sword",
+    "tier": "S",
+    "tags": ["combo", "burst", "aoe"],
+    "synergies": {
+      "perfect": ["shadow", "spirit"],
+      "good": ["dough", "leopard", "control"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "dragonheart",
+    "name": "Dragonheart",
+    "category": "Sword",
+    "tier": "S",
+    "tags": ["combo", "burst", "mobility"],
+    "synergies": {
+      "perfect": ["dragon", "leopard"],
+      "good": ["dough", "shadow", "spirit"],
+      "acceptable": ["buddha", "venom", "rumble"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "fox_lamp",
+    "name": "Fox Lamp",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "utility"],
+    "synergies": {
+      "perfect": ["buddha", "dragon"],
+      "good": ["dough", "venom", "magma"],
+      "acceptable": ["leopard", "shadow", "rubber"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "shark_anchor",
+    "name": "Shark Anchor",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "stun"],
+    "synergies": {
+      "perfect": ["buddha"],
+      "good": ["dragon", "rubber", "quake"],
+      "acceptable": ["dough", "venom", "magma"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "spikey_trident",
+    "name": "Spikey Trident",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "range"],
+    "synergies": {
+      "perfect": ["buddha", "dragon"],
+      "good": ["dough", "venom", "magma"],
+      "acceptable": ["leopard", "shadow", "rubber"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "buddy_sword",
+    "name": "Buddy Sword",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "burst", "utility"],
+    "synergies": {
+      "perfect": ["buddha", "dragon"],
+      "good": ["dough", "shadow", "venom"],
+      "acceptable": ["leopard", "spirit", "rubber"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "canvander",
+    "name": "Canvander",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "farming"],
+    "synergies": {
+      "perfect": ["buddha"],
+      "good": ["dragon", "rubber", "quake"],
+      "acceptable": ["dough", "venom", "magma"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "dark_dagger",
+    "name": "Dark Dagger",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "burst", "mobility"],
+    "synergies": {
+      "perfect": ["shadow", "dough"],
+      "good": ["leopard", "spirit", "control"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "twin_hooks",
+    "name": "Twin Hooks",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["combo", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "dragon_trident",
+    "name": "Dragon Trident",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "range"],
+    "synergies": {
+      "perfect": ["buddha", "dragon"],
+      "good": ["dough", "venom", "magma"],
+      "acceptable": ["leopard", "shadow", "rubber"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "pole_v1",
+    "name": "Pole (1st Form)",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["aoe", "farming", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "jitte",
+    "name": "Jitte",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["combo", "stun", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "koko",
+    "name": "Koko",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "range"],
+    "synergies": {
+      "perfect": ["control"],
+      "good": ["buddha", "dragon", "magma"],
+      "acceptable": ["dough", "venom", "rubber"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "gravity_cane",
+    "name": "Gravity Cane",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "utility"],
+    "synergies": {
+      "perfect": ["buddha", "control"],
+      "good": ["dough", "dragon", "venom"],
+      "acceptable": ["leopard", "shadow", "rubber"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "longsword",
+    "name": "Longsword",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["combo", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "saddi",
+    "name": "Saddi",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "mobility"],
+    "synergies": {
+      "perfect": ["dough", "shadow"],
+      "good": ["leopard", "spirit", "rumble"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["ice", "barrier", "chop"]
+    }
+  },
+  {
+    "id": "wando",
+    "name": "Wando",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "burst", "mobility"],
+    "synergies": {
+      "perfect": ["dough", "shadow"],
+      "good": ["leopard", "spirit", "rumble"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["ice", "sand", "smoke"]
+    }
+  },
+  {
+    "id": "soul_cane",
+    "name": "Soul Cane",
+    "category": "Sword",
+    "tier": "A",
+    "tags": ["combo", "aoe", "utility"],
+    "synergies": {
+      "perfect": ["shadow", "spirit"],
+      "good": ["dough", "control"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["leopard", "rumble", "light"]
+    }
+  },
+  {
+    "id": "bisento",
+    "name": "Bisento",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["aoe", "farming", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "cutlass",
+    "name": "Cutlass",
+    "category": "Sword",
+    "tier": "C",
+    "tags": ["beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": [],
+      "acceptable": ["buddha", "rubber", "smoke"],
+      "poor": ["dough", "leopard", "shadow"]
+    }
+  },
+  {
+    "id": "dual_katana",
+    "name": "Dual Katana",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["combo", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "dual_headed_blade",
+    "name": "Dual-Headed Blade",
+    "category": "Sword",
+    "tier": "C",
+    "tags": ["beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": [],
+      "acceptable": ["buddha", "rubber", "smoke"],
+      "poor": ["dough", "leopard", "shadow"]
+    }
+  },
+  {
+    "id": "iron_mace",
+    "name": "Iron Mace",
+    "category": "Sword",
+    "tier": "C",
+    "tags": ["beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": [],
+      "acceptable": ["buddha", "rubber", "smoke"],
+      "poor": ["dough", "leopard", "shadow"]
+    }
+  },
+  {
+    "id": "katana",
+    "name": "Katana",
+    "category": "Sword",
+    "tier": "C",
+    "tags": ["beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": [],
+      "acceptable": ["buddha", "rubber", "smoke"],
+      "poor": ["dough", "leopard", "shadow"]
+    }
+  },
+  {
+    "id": "pipe",
+    "name": "Pipe",
+    "category": "Sword",
+    "tier": "C",
+    "tags": ["beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": [],
+      "acceptable": ["buddha", "rubber", "smoke"],
+      "poor": ["dough", "leopard", "shadow"]
+    }
+  },
+  {
+    "id": "shark_saw",
+    "name": "Shark Saw",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["aoe", "farming", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "triple_katana",
+    "name": "Triple Katana",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["combo", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
+    }
+  },
+  {
+    "id": "triple_dark_blade",
+    "name": "Triple Dark Blade",
+    "category": "Sword",
+    "tier": "S",
+    "tags": ["combo", "burst", "range"],
+    "synergies": {
+      "perfect": ["shadow", "spirit"],
+      "good": ["dough", "control"],
+      "acceptable": ["buddha", "dragon", "venom"],
+      "poor": ["leopard", "rumble", "light"]
+    }
+  },
+  {
+    "id": "wardens_sword",
+    "name": "Warden's Sword",
+    "category": "Sword",
+    "tier": "B",
+    "tags": ["combo", "beginner_friendly"],
+    "synergies": {
+      "perfect": [],
+      "good": ["buddha", "rubber"],
+      "acceptable": ["dough", "ice", "sand"],
+      "poor": ["leopard", "shadow", "spirit"]
     }
   }
 ]

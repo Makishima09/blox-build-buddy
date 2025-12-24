@@ -5,6 +5,7 @@ import { ArrowLeft, Share2, RotateCcw, Swords } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 import { Slider } from '@/components/ui/slider';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { FruitSelect } from '@/components/shared/FruitSelect';
@@ -25,6 +26,7 @@ export default function Simulator() {
     level: 1500,
     fruit: '',
     weapon: '',
+    gun: '',
     fightingStyle: '',
     statFocus: 'balanced',
   });
@@ -33,6 +35,7 @@ export default function Simulator() {
     level: 1500,
     fruit: '',
     weapon: '',
+    gun: '',
     fightingStyle: '',
     statFocus: 'balanced',
   });
@@ -43,7 +46,7 @@ export default function Simulator() {
 
   const handleSimulate = () => {
     if (!canSimulate) return;
-    const matchupResult = calculateMatchup(myBuild, rivalBuild);
+    const matchupResult = calculateMatchup(myBuild, rivalBuild, t);
     setResult(matchupResult);
   };
 
@@ -102,11 +105,26 @@ export default function Simulator() {
                 <CardHeader><CardTitle className="text-primary">{t('simulator.your_build')}</CardTitle></CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <Label>{t('simulator.level')}: {myBuild.level}</Label>
-                    <Slider value={[myBuild.level]} onValueChange={([v]) => setMyBuild({ ...myBuild, level: v })} min={1} max={2550} step={50} className="mt-2" />
+                    <Label>{t('simulator.level')}</Label>
+                    <div className="flex gap-2 items-center mt-2">
+                      <Slider value={[myBuild.level]} onValueChange={([v]) => setMyBuild({ ...myBuild, level: v })} min={1} max={2800} step={50} className="flex-1" />
+                      <Input
+                        type="number"
+                        value={myBuild.level}
+                        onChange={(e) => {
+                          const val = parseInt(e.target.value) || 1;
+                          const clamped = Math.min(2800, Math.max(1, val));
+                          setMyBuild({ ...myBuild, level: clamped });
+                        }}
+                        min={1}
+                        max={2800}
+                        className="w-20"
+                      />
+                    </div>
                   </div>
                   <div><Label>{t('simulator.fruit')} *</Label><FruitSelect value={myBuild.fruit} onValueChange={(v) => setMyBuild({ ...myBuild, fruit: v })} /></div>
                   <div><Label>{t('simulator.weapon')} *</Label><WeaponSelect value={myBuild.weapon} onValueChange={(v) => setMyBuild({ ...myBuild, weapon: v })} category="Sword" placeholder={t('select.weapon')} /></div>
+                  <div><Label>{t('simulator.gun')}</Label><WeaponSelect value={myBuild.gun || ''} onValueChange={(v) => setMyBuild({ ...myBuild, gun: v })} category="Gun" placeholder={t('select.gun')} /></div>
                   <div><Label>{t('simulator.style')}</Label><WeaponSelect value={myBuild.fightingStyle} onValueChange={(v) => setMyBuild({ ...myBuild, fightingStyle: v })} category="Fighting Style" placeholder={t('select.style')} /></div>
                   <div>
                     <Label>{t('simulator.stats')}</Label>
@@ -127,11 +145,26 @@ export default function Simulator() {
                 <CardHeader><CardTitle className="text-destructive">{t('simulator.rival_build')}</CardTitle></CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <Label>{t('simulator.level')}: {rivalBuild.level}</Label>
-                    <Slider value={[rivalBuild.level]} onValueChange={([v]) => setRivalBuild({ ...rivalBuild, level: v })} min={1} max={2550} step={50} className="mt-2" />
+                    <Label>{t('simulator.level')}</Label>
+                    <div className="flex gap-2 items-center mt-2">
+                      <Slider value={[rivalBuild.level]} onValueChange={([v]) => setRivalBuild({ ...rivalBuild, level: v })} min={1} max={2800} step={50} className="flex-1" />
+                      <Input
+                        type="number"
+                        value={rivalBuild.level}
+                        onChange={(e) => {
+                          const val = parseInt(e.target.value) || 1;
+                          const clamped = Math.min(2800, Math.max(1, val));
+                          setRivalBuild({ ...rivalBuild, level: clamped });
+                        }}
+                        min={1}
+                        max={2800}
+                        className="w-20"
+                      />
+                    </div>
                   </div>
                   <div><Label>{t('simulator.fruit')} *</Label><FruitSelect value={rivalBuild.fruit} onValueChange={(v) => setRivalBuild({ ...rivalBuild, fruit: v })} /></div>
                   <div><Label>{t('simulator.weapon')}</Label><WeaponSelect value={rivalBuild.weapon} onValueChange={(v) => setRivalBuild({ ...rivalBuild, weapon: v })} category="Sword" placeholder={t('select.weapon')} /></div>
+                  <div><Label>{t('simulator.gun')}</Label><WeaponSelect value={rivalBuild.gun || ''} onValueChange={(v) => setRivalBuild({ ...rivalBuild, gun: v })} category="Gun" placeholder={t('select.gun')} /></div>
                   <div><Label>{t('simulator.style')}</Label><WeaponSelect value={rivalBuild.fightingStyle} onValueChange={(v) => setRivalBuild({ ...rivalBuild, fightingStyle: v })} category="Fighting Style" placeholder={t('select.style')} /></div>
                 </CardContent>
               </Card>
@@ -148,7 +181,7 @@ export default function Simulator() {
               {/* Score */}
               <Card glow className="text-center py-8">
                 <ScoreGauge score={result.score} size="lg" />
-                <p className="text-muted-foreground mt-4">{t('simulator.confidence')}: {result.confidence}</p>
+                <p className="text-muted-foreground mt-4">{t('simulator.confidence')}: {t(`confidence.${result.confidence}`)}</p>
               </Card>
 
               <div className="grid lg:grid-cols-2 gap-6">

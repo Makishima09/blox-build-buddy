@@ -25,7 +25,7 @@ export default function Optimizer() {
   const handleOptimize = () => {
     if (!objective) return;
     const input: OptimizerInput = { currentLevel: 1500, currentBuild, objective, constraints };
-    setResult(optimizeBuild(input));
+    setResult(optimizeBuild(input, t));
   };
 
   const objectives = [
@@ -101,7 +101,7 @@ export default function Optimizer() {
                 <CardContent className="space-y-3">
                   {result.upgradePath.map((step) => (
                     <div key={step.step} className={cn('p-4 rounded-lg border-l-4', step.priority === 'critical' ? 'border-l-destructive bg-destructive/10' : step.priority === 'high' ? 'border-l-accent bg-accent/10' : 'border-l-muted-foreground bg-muted/30')}>
-                      <div className="flex justify-between items-start"><p className="font-medium">{step.action}</p><span className="text-xs uppercase px-2 py-0.5 rounded bg-muted">{step.priority}</span></div>
+                      <div className="flex justify-between items-start"><p className="font-medium">{step.action}</p><span className="text-xs uppercase px-2 py-0.5 rounded bg-muted">{t(`priority.${step.priority}`)}</span></div>
                       <p className="text-sm text-muted-foreground mt-1">{step.reason}</p>
                       <p className="text-xs text-muted-foreground mt-1">⏱️ {step.estimatedTime}</p>
                     </div>

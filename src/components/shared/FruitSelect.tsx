@@ -29,6 +29,11 @@ interface FruitSelectProps {
 export function FruitSelect({ value, onValueChange, placeholder = 'Select fruit...' }: FruitSelectProps) {
   const [open, setOpen] = useState(false);
 
+  const getTierOrder = (tier: string): number => {
+    const order: Record<string, number> = { 'S': 0, 'A': 1, 'B': 2, 'C': 3 };
+    return order[tier] ?? 4;
+  };
+
   const groupedFruits = useMemo(() => {
     const groups: Record<string, Fruit[]> = {
       'Paramecia': [],
@@ -37,6 +42,14 @@ export function FruitSelect({ value, onValueChange, placeholder = 'Select fruit.
     };
     fruits.forEach((fruit) => {
       groups[fruit.type]?.push(fruit);
+    });
+    // Ordenar cada grupo por tier (S > A > B > C)
+    Object.keys(groups).forEach((type) => {
+      groups[type].sort((a, b) => {
+        const tierDiff = getTierOrder(a.tier) - getTierOrder(b.tier);
+        if (tierDiff !== 0) return tierDiff;
+        return a.name.localeCompare(b.name);
+      });
     });
     return groups;
   }, []);

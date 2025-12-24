@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Simulator from "./pages/Simulator";
 import Optimizer from "./pages/Optimizer";
+import Fruits from "./pages/Fruits";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/simulator" element={<Simulator />} />
           <Route path="/optimizer" element={<Optimizer />} />
+          <Route path="/fruits" element={<Fruits />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

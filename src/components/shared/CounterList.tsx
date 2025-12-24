@@ -3,12 +3,14 @@ import { ArrowUp, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Counter } from '@/types';
 import { Card, CardContent } from '@/components/ui/card';
+import { useLanguage } from '@/hooks/useLanguage';
 
 interface CounterListProps {
   counters: Counter[];
 }
 
 export function CounterList({ counters }: CounterListProps) {
+  const { t } = useLanguage();
   const getPriorityColor = (priority: Counter['priority']) => {
     switch (priority) {
       case 'high':
@@ -38,7 +40,7 @@ export function CounterList({ counters }: CounterListProps) {
   if (counters.length === 0) {
     return (
       <p className="text-sm text-muted-foreground text-center py-4">
-        Your build is already well optimized for this matchup!
+        {t('counter.no_improvements')}
       </p>
     );
   }
@@ -65,12 +67,12 @@ export function CounterList({ counters }: CounterListProps) {
                         getPriorityColor(counter.priority)
                       )}
                     >
-                      {counter.priority}
+                      {t(`priority.${counter.priority}`)}
                     </span>
                   </div>
                   <div className="flex items-center gap-1 mt-1 text-success text-sm">
                     <ArrowUp className="w-4 h-4" />
-                    <span>+{counter.expectedImprovement} points</span>
+                    <span>+{counter.expectedImprovement} {t('counter.points')}</span>
                   </div>
                 </div>
               </div>

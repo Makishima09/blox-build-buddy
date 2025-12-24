@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import { Target, Clock, Zap, Battery } from 'lucide-react';
 import { Tip } from '@/types';
+import { useLanguage } from '@/hooks/useLanguage';
 
 interface TipListProps {
   tips: Tip[];
 }
 
 export function TipList({ tips }: TipListProps) {
+  const { t } = useLanguage();
   const getCategoryIcon = (category: Tip['category']) => {
     switch (category) {
       case 'positioning':
@@ -23,18 +25,7 @@ export function TipList({ tips }: TipListProps) {
   };
 
   const getCategoryLabel = (category: Tip['category']) => {
-    switch (category) {
-      case 'positioning':
-        return 'Positioning';
-      case 'timing':
-        return 'Timing';
-      case 'combo':
-        return 'Combo';
-      case 'resource':
-        return 'Resource';
-      default:
-        return 'Tip';
-    }
+    return t(`tip.${category}`);
   };
 
   if (tips.length === 0) {
