@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Simulator from "./pages/Simulator";
 import Optimizer from "./pages/Optimizer";
 import Fruits from "./pages/Fruits";
+import Trader from "./pages/Trader";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -17,13 +18,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/simulator" element={<Simulator />} />
-          <Route path="/optimizer" element={<Optimizer />} />
-          <Route path="/fruits" element={<Fruits />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/simulator" element={<Simulator />} />
+              <Route path="/optimizer" element={<Optimizer />} />
+              <Route path="/fruits" element={<Fruits />} />
+              <Route path="/trader" element={<Trader />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

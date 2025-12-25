@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Search, Filter } from 'lucide-react';
+import { ArrowLeft, Search, Filter, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -42,14 +42,35 @@ const FruitCard = ({ fruit, index, t }: { fruit: Fruit; index: number; t: (key: 
   >
     <Card className="hover:border-primary/50 transition-all duration-300 hover:glow-primary h-full">
       <CardHeader>
-        <div className="flex items-start justify-between">
-          <div>
-            <CardTitle className="text-lg">{fruit.name}</CardTitle>
-            <CardDescription className="mt-1">{fruit.type}</CardDescription>
+        <div className="flex items-start gap-3">
+          <div className="w-16 h-16 rounded-lg bg-muted/50 p-2 flex items-center justify-center flex-shrink-0">
+            {fruit.image ? (
+              <img 
+                src={fruit.image} 
+                alt={fruit.name}
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = `<span class="text-2xl">${getTypeIcon(fruit.type)}</span>`;
+                  }
+                }}
+              />
+            ) : (
+              <span className="text-2xl">{getTypeIcon(fruit.type)}</span>
+            )}
           </div>
-          <Badge className={cn('border', getTierColor(fruit.tier))}>
-            {fruit.tier}
-          </Badge>
+          <div className="flex-1 flex items-start justify-between">
+            <div>
+              <CardTitle className="text-lg">{fruit.name}</CardTitle>
+              <CardDescription className="mt-1">{fruit.type}</CardDescription>
+            </div>
+            <Badge className={cn('border', getTierColor(fruit.tier))}>
+              {fruit.tier}
+            </Badge>
+          </div>
         </div>
       </CardHeader>
       <CardContent>
@@ -185,8 +206,18 @@ export default function Fruits() {
                   placeholder={t('fruits.search_placeholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10"
+                  className="pl-10 pr-10"
                 />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="Limpiar búsqueda"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
               </div>
               <div className="flex gap-2 flex-wrap">
                 <Button

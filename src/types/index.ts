@@ -13,6 +13,12 @@ export interface Fruit {
     secondary: 'melee' | 'defense' | 'sword' | 'gun' | 'fruit';
     distribution: [number, number, number, number, number];
   };
+  value?: {
+    money: number; // Valor en oro (Money)
+    robux: number; // Valor en Robux
+    rarity?: 'Common' | 'Uncommon' | 'Rare' | 'Legendary' | 'Mythical' | 'Premium';
+  };
+  image?: string; // URL de la imagen de la fruta
 }
 
 export interface Weapon {
@@ -128,5 +134,38 @@ export interface OptimizerResult {
   expectedImprovement: {
     metric: string;
     change: string;
+  };
+}
+
+export interface TradeItem {
+  fruitId: string;
+  value: number; // Valor en oro
+  isPerm?: boolean; // Si es una fruta permanente
+}
+
+export interface Trade {
+  myFruits: TradeItem[]; // Máximo 4 frutas
+  theirFruits: TradeItem[]; // Máximo 4 frutas
+}
+
+export interface TradeAnalysis {
+  isFair: boolean;
+  fairnessScore: number; // 0-100, donde 100 es completamente justo
+  verdict: 'very_fair' | 'fair' | 'slightly_unfair' | 'unfair' | 'very_unfair';
+  difference: number; // Diferencia en valor (positivo = tú ganas, negativo = pierdes)
+  differencePercentage: number; // Porcentaje de diferencia
+  recommendations: {
+    type: 'warning' | 'suggestion' | 'info';
+    text: string;
+  }[];
+  fairValueRange: {
+    min: number;
+    max: number;
+    recommended: number;
+  };
+  equivalentFruits: string[]; // Frutas de valor similar que podrías pedir
+  marketValue: {
+    myFruit: number;
+    theirFruit: number;
   };
 }

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Swords, Wrench, BookOpen } from 'lucide-react';
+import { Swords, Wrench, BookOpen, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { LanguageToggle } from '@/components/shared/LanguageToggle';
@@ -58,6 +58,12 @@ const Index = () => {
               {t('cta.fruits')}
             </Link>
           </Button>
+          <Button asChild variant="secondary" size="xl">
+            <Link to="/trader">
+              <TrendingUp className="w-5 h-5" />
+              {t('cta.trader')}
+            </Link>
+          </Button>
         </motion.div>
 
         {/* Feature Cards */}
@@ -65,7 +71,7 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
         >
           <Card className="text-left hover:border-primary/50 transition-all duration-300 hover:glow-primary">
             <CardHeader>
@@ -94,6 +100,16 @@ const Index = () => {
               </div>
               <CardTitle>{t('feature.fruits.title')}</CardTitle>
               <CardDescription>{t('feature.fruits.desc')}</CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="text-left hover:border-warning/50 transition-all duration-300 hover:glow-warning">
+            <CardHeader>
+              <div className="w-12 h-12 rounded-lg bg-warning/20 flex items-center justify-center mb-2">
+                <TrendingUp className="w-6 h-6 text-warning" />
+              </div>
+              <CardTitle>{t('feature.trader.title')}</CardTitle>
+              <CardDescription>{t('feature.trader.desc')}</CardDescription>
             </CardHeader>
           </Card>
         </motion.div>

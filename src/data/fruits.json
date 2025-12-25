@@ -4,377 +4,1728 @@
     "name": "Rocket",
     "type": "Paramecia",
     "tier": "C",
-    "tags": ["mobility", "beginner_friendly"],
-    "counters": { "strong_against": ["spike", "bomb"], "weak_against": ["dough", "leopard", "dragon"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+    "tags": [
+      "mobility",
+      "beginner_friendly"
+    ],
+    "counters": {
+      "strong_against": [
+        "spike",
+        "bomb"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "dragon"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        20,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 5000,
+      "robux": 50,
+      "rarity": "Common"
+    },
+    "image": "/fruit_img/Rocket_Fruit.webp"
   },
   {
     "id": "spin",
     "name": "Spin",
     "type": "Paramecia",
     "tier": "C",
-    "tags": ["utility", "beginner_friendly"],
-    "counters": { "strong_against": ["spike"], "weak_against": ["dough", "leopard", "buddha"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+    "tags": [
+      "utility",
+      "beginner_friendly"
+    ],
+    "counters": {
+      "strong_against": [
+        "spike"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "buddha"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        20,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 7500,
+      "robux": 75,
+      "rarity": "Common"
+    },
+    "image": "/fruit_img/Spin_Fruit.webp"
   },
   {
     "id": "blade",
     "name": "Blade",
     "type": "Paramecia",
     "tier": "C",
-    "tags": ["burst", "beginner_friendly"],
-    "counters": { "strong_against": ["spin", "rocket"], "weak_against": ["dough", "leopard", "buddha"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+    "tags": [
+      "burst",
+      "beginner_friendly"
+    ],
+    "counters": {
+      "strong_against": [
+        "spin",
+        "rocket"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "buddha"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        20,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 30000,
+      "robux": 100,
+      "rarity": "Common"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Blade_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "spring",
     "name": "Spring",
     "type": "Paramecia",
     "tier": "C",
-    "tags": ["mobility", "beginner_friendly"],
-    "counters": { "strong_against": ["spin", "rocket"], "weak_against": ["dough", "leopard", "buddha"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+    "tags": [
+      "mobility",
+      "beginner_friendly"
+    ],
+    "counters": {
+      "strong_against": [
+        "spin",
+        "rocket"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "buddha"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        20,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 60000,
+      "robux": 180,
+      "rarity": "Common"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Spring_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "bomb",
     "name": "Bomb",
     "type": "Paramecia",
     "tier": "C",
-    "tags": ["burst", "aoe", "beginner_friendly"],
-    "counters": { "strong_against": ["spin", "spring"], "weak_against": ["dough", "leopard", "buddha", "smoke"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+    "tags": [
+      "burst",
+      "aoe",
+      "beginner_friendly"
+    ],
+    "counters": {
+      "strong_against": [
+        "spin",
+        "spring"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "buddha",
+        "smoke"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        20,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 80000,
+      "robux": 220,
+      "rarity": "Common"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Bomb_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "smoke",
     "name": "Smoke",
     "type": "Logia",
     "tier": "C",
-    "tags": ["mobility", "utility", "beginner_friendly", "logia"],
-    "counters": { "strong_against": ["bomb", "spike", "spring"], "weak_against": ["dough", "blizzard", "light", "magma", "ice", "sand"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+    "tags": [
+      "mobility",
+      "utility",
+      "beginner_friendly",
+      "logia"
+    ],
+    "counters": {
+      "strong_against": [
+        "bomb",
+        "spike",
+        "spring"
+      ],
+      "weak_against": [
+        "dough",
+        "blizzard",
+        "light",
+        "magma",
+        "ice",
+        "sand"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        20,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 100000,
+      "robux": 250,
+      "rarity": "Common"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Smoke_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "spike",
     "name": "Spike",
     "type": "Paramecia",
     "tier": "C",
-    "tags": ["defense", "beginner_friendly"],
-    "counters": { "strong_against": [], "weak_against": ["dough", "leopard", "buddha", "smoke"] },
-    "optimalStats": { "primary": "defense", "secondary": "fruit", "distribution": [20, 40, 0, 0, 40] }
+    "tags": [
+      "defense",
+      "beginner_friendly"
+    ],
+    "counters": {
+      "strong_against": [],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "buddha",
+        "smoke"
+      ]
+    },
+    "optimalStats": {
+      "primary": "defense",
+      "secondary": "fruit",
+      "distribution": [
+        20,
+        40,
+        0,
+        0,
+        40
+      ]
+    },
+    "value": {
+      "money": 180000,
+      "robux": 380,
+      "rarity": "Common"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Spike_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "flame",
     "name": "Flame",
     "type": "Logia",
     "tier": "B",
-    "tags": ["burst", "aoe", "logia", "awakened"],
-    "counters": { "strong_against": ["ice", "smoke", "spike", "spring"], "weak_against": ["magma", "dough", "leopard"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 20, 0, 0, 55] }
+    "tags": [
+      "burst",
+      "aoe",
+      "logia",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "ice",
+        "smoke",
+        "spike",
+        "spring"
+      ],
+      "weak_against": [
+        "magma",
+        "dough",
+        "leopard"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        25,
+        20,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 250000,
+      "robux": 550,
+      "rarity": "Uncommon"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Flame_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "ice",
     "name": "Ice",
     "type": "Logia",
     "tier": "B",
-    "tags": ["zoning", "slow", "range", "logia", "awakened"],
-    "counters": { "strong_against": ["smoke", "spring", "spike"], "weak_against": ["dough", "magma", "lightning", "shadow", "flame"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [15, 30, 0, 0, 55] }
+    "tags": [
+      "zoning",
+      "slow",
+      "range",
+      "logia",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "spring",
+        "spike"
+      ],
+      "weak_against": [
+        "dough",
+        "magma",
+        "lightning",
+        "shadow",
+        "flame"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        15,
+        30,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 350000,
+      "robux": 750,
+      "rarity": "Uncommon"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Ice_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "sand",
     "name": "Sand",
     "type": "Logia",
     "tier": "B",
-    "tags": ["zoning", "aoe", "utility", "logia", "awakened"],
-    "counters": { "strong_against": ["smoke", "spring", "rubber"], "weak_against": ["dough", "blizzard", "light", "magma"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
+    "tags": [
+      "zoning",
+      "aoe",
+      "utility",
+      "logia",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "spring",
+        "rubber"
+      ],
+      "weak_against": [
+        "dough",
+        "blizzard",
+        "light",
+        "magma"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        20,
+        30,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 420000,
+      "robux": 900,
+      "rarity": "Uncommon"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Sand_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "dark",
     "name": "Dark",
     "type": "Logia",
     "tier": "B",
-    "tags": ["combo", "utility", "logia", "awakened"],
-    "counters": { "strong_against": ["light", "smoke", "flame"], "weak_against": ["dough", "leopard", "dragon"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 15, 0, 0, 60] }
+    "tags": [
+      "combo",
+      "utility",
+      "logia",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "light",
+        "smoke",
+        "flame"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "dragon"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        25,
+        15,
+        0,
+        0,
+        60
+      ]
+    },
+    "value": {
+      "money": 500000,
+      "robux": 1100,
+      "rarity": "Uncommon"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Dark_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "eagle",
     "name": "Eagle",
     "type": "Zoan",
     "tier": "B",
-    "tags": ["mobility", "transformation", "utility"],
-    "counters": { "strong_against": ["smoke", "spike", "spring"], "weak_against": ["dough", "leopard", "dragon", "kitsune"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
+    "tags": [
+      "mobility",
+      "transformation",
+      "utility"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "spike",
+        "spring"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "dragon",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        15,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 550000,
+      "robux": 1200,
+      "rarity": "Uncommon"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Eagle_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "diamond",
     "name": "Diamond",
     "type": "Paramecia",
     "tier": "B",
-    "tags": ["defense", "tankiness"],
-    "counters": { "strong_against": ["smoke", "spike", "blade"], "weak_against": ["dough", "leopard", "venom", "quake"] },
-    "optimalStats": { "primary": "defense", "secondary": "melee", "distribution": [35, 40, 0, 0, 25] }
+    "tags": [
+      "defense",
+      "tankiness"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "spike",
+        "blade"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "venom",
+        "quake"
+      ]
+    },
+    "optimalStats": {
+      "primary": "defense",
+      "secondary": "melee",
+      "distribution": [
+        35,
+        40,
+        0,
+        0,
+        25
+      ]
+    },
+    "value": {
+      "money": 400000,
+      "robux": 800,
+      "rarity": "Uncommon"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Diamond_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "light",
     "name": "Light",
     "type": "Logia",
     "tier": "A",
-    "tags": ["mobility", "burst", "range", "logia", "awakened"],
-    "counters": { "strong_against": ["blizzard", "smoke", "sand", "ice"], "weak_against": ["shadow", "portal", "dark"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 10, 0, 0, 65] }
+    "tags": [
+      "mobility",
+      "burst",
+      "range",
+      "logia",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "blizzard",
+        "smoke",
+        "sand",
+        "ice"
+      ],
+      "weak_against": [
+        "shadow",
+        "portal",
+        "dark"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        25,
+        10,
+        0,
+        0,
+        65
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Light_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "rubber",
     "name": "Rubber",
     "type": "Paramecia",
     "tier": "B",
-    "tags": ["mobility", "combo", "tankiness", "awakened"],
-    "counters": { "strong_against": ["lightning", "smoke", "spike"], "weak_against": ["buddha", "quake", "sand", "dough"] },
-    "optimalStats": { "primary": "melee", "secondary": "fruit", "distribution": [40, 20, 0, 0, 40] }
+    "tags": [
+      "mobility",
+      "combo",
+      "tankiness",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "lightning",
+        "smoke",
+        "spike"
+      ],
+      "weak_against": [
+        "buddha",
+        "quake",
+        "sand",
+        "dough"
+      ]
+    },
+    "optimalStats": {
+      "primary": "melee",
+      "secondary": "fruit",
+      "distribution": [
+        40,
+        20,
+        0,
+        0,
+        40
+      ]
+    },
+    "value": {
+      "money": 400000,
+      "robux": 800,
+      "rarity": "Uncommon"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Rubber_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "ghost",
     "name": "Ghost",
     "type": "Paramecia",
     "tier": "A",
-    "tags": ["utility", "mobility", "combo"],
-    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "spirit"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
+    "tags": [
+      "utility",
+      "mobility",
+      "combo"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "spirit"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        15,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Ghost_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "magma",
     "name": "Magma",
     "type": "Logia",
     "tier": "A",
-    "tags": ["burst", "aoe", "dot", "logia", "awakened"],
-    "counters": { "strong_against": ["ice", "sand", "smoke", "flame"], "weak_against": ["portal", "lightning", "dough"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 25, 0, 0, 55] }
+    "tags": [
+      "burst",
+      "aoe",
+      "dot",
+      "logia",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "ice",
+        "sand",
+        "smoke",
+        "flame"
+      ],
+      "weak_against": [
+        "portal",
+        "lightning",
+        "dough"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        20,
+        25,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Magma_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "quake",
     "name": "Quake",
     "type": "Paramecia",
     "tier": "A",
-    "tags": ["aoe", "burst", "stun", "awakened"],
-    "counters": { "strong_against": ["buddha", "diamond", "rubber"], "weak_against": ["control", "portal", "dough"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
+    "tags": [
+      "aoe",
+      "burst",
+      "stun",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "buddha",
+        "diamond",
+        "rubber"
+      ],
+      "weak_against": [
+        "control",
+        "portal",
+        "dough"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        20,
+        30,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Quake_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "buddha",
     "name": "Buddha",
     "type": "Zoan",
     "tier": "S",
-    "tags": ["tankiness", "aoe", "beginner_friendly", "transformation", "awakened"],
-    "counters": { "strong_against": ["portal", "rubber", "ghost"], "weak_against": ["leopard", "dough", "venom"] },
-    "optimalStats": { "primary": "melee", "secondary": "defense", "distribution": [40, 30, 20, 0, 10] }
+    "tags": [
+      "tankiness",
+      "aoe",
+      "beginner_friendly",
+      "transformation",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "portal",
+        "rubber",
+        "ghost"
+      ],
+      "weak_against": [
+        "leopard",
+        "dough",
+        "venom"
+      ]
+    },
+    "optimalStats": {
+      "primary": "melee",
+      "secondary": "defense",
+      "distribution": [
+        40,
+        30,
+        20,
+        0,
+        10
+      ]
+    },
+    "value": {
+      "money": 5000000,
+      "robux": 9000,
+      "rarity": "Mythical"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Buddha_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "love",
     "name": "Love",
     "type": "Paramecia",
     "tier": "A",
-    "tags": ["combo", "stun", "utility"],
-    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "buddha"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
+    "tags": [
+      "combo",
+      "stun",
+      "utility"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "buddha"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        15,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Love_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "creation",
     "name": "Creation",
     "type": "Paramecia",
     "tier": "A",
-    "tags": ["utility", "zoning", "combo"],
-    "counters": { "strong_against": ["smoke", "ice", "ghost"], "weak_against": ["dough", "leopard", "kitsune"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 25, 0, 0, 55] }
+    "tags": [
+      "utility",
+      "zoning",
+      "combo"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "ghost"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        20,
+        25,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 1400000,
+      "robux": 2500,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Creation_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "spider",
     "name": "Spider",
     "type": "Paramecia",
     "tier": "A",
-    "tags": ["combo", "utility", "stun"],
-    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "dragon"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
+    "tags": [
+      "combo",
+      "utility",
+      "stun"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "dragon"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        15,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Spider_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "sound",
     "name": "Sound",
     "type": "Paramecia",
     "tier": "A",
-    "tags": ["burst", "aoe", "stun", "awakened"],
-    "counters": { "strong_against": ["smoke", "ice", "sand", "ghost"], "weak_against": ["dough", "leopard", "dragon"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 20, 0, 0, 55] }
+    "tags": [
+      "burst",
+      "aoe",
+      "stun",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand",
+        "ghost"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "dragon"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        25,
+        20,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Sound_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "phoenix",
     "name": "Phoenix",
     "type": "Zoan",
     "tier": "A",
-    "tags": ["mobility", "sustain", "transformation", "awakened"],
-    "counters": { "strong_against": ["ice", "sand", "ghost"], "weak_against": ["dough", "leopard", "venom"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
+    "tags": [
+      "mobility",
+      "sustain",
+      "transformation",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "ice",
+        "sand",
+        "ghost"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "venom"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        20,
+        30,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Phoenix_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "portal",
     "name": "Portal",
     "type": "Paramecia",
     "tier": "A",
-    "tags": ["mobility", "utility", "combo", "awakened"],
-    "counters": { "strong_against": ["magma", "light", "ice", "quake"], "weak_against": ["buddha", "leopard", "dough"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 10, 0, 0, 60] }
+    "tags": [
+      "mobility",
+      "utility",
+      "combo",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "magma",
+        "light",
+        "ice",
+        "quake"
+      ],
+      "weak_against": [
+        "buddha",
+        "leopard",
+        "dough"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        10,
+        0,
+        0,
+        60
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Portal_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "lightning",
     "name": "Lightning",
     "type": "Logia",
     "tier": "A",
-    "tags": ["mobility", "burst", "combo", "logia", "awakened"],
-    "counters": { "strong_against": ["ice", "sand", "magma", "smoke"], "weak_against": ["control", "spirit", "rubber", "dough"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 15, 0, 0, 60] }
+    "tags": [
+      "mobility",
+      "burst",
+      "combo",
+      "logia",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "ice",
+        "sand",
+        "magma",
+        "smoke"
+      ],
+      "weak_against": [
+        "control",
+        "spirit",
+        "rubber",
+        "dough"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        25,
+        15,
+        0,
+        0,
+        60
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Lightning_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "pain",
     "name": "Pain",
     "type": "Paramecia",
     "tier": "A",
-    "tags": ["burst", "combo", "utility"],
-    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "dragon", "spirit"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 20, 0, 0, 55] }
+    "tags": [
+      "burst",
+      "combo",
+      "utility"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "dragon",
+        "spirit"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        25,
+        20,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Pain_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "blizzard",
     "name": "Blizzard",
     "type": "Logia",
     "tier": "A",
-    "tags": ["zoning", "slow", "aoe", "logia", "awakened"],
-    "counters": { "strong_against": ["venom", "sand", "smoke", "ice"], "weak_against": ["dough", "light", "magma"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [15, 30, 0, 0, 55] }
+    "tags": [
+      "zoning",
+      "slow",
+      "aoe",
+      "logia",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "venom",
+        "sand",
+        "smoke",
+        "ice"
+      ],
+      "weak_against": [
+        "dough",
+        "light",
+        "magma"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        15,
+        30,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Blizzard_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "gravity",
     "name": "Gravity",
     "type": "Paramecia",
     "tier": "A",
-    "tags": ["combo", "utility", "aoe", "awakened"],
-    "counters": { "strong_against": ["smoke", "ice", "sand", "ghost"], "weak_against": ["dough", "leopard", "dragon"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 25, 0, 0, 55] }
+    "tags": [
+      "combo",
+      "utility",
+      "aoe",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand",
+        "ghost"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "dragon"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        20,
+        25,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 2500000,
+      "robux": 4500,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Gravity_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "mammoth",
     "name": "Mammoth",
     "type": "Zoan",
     "tier": "A",
-    "tags": ["tankiness", "aoe", "transformation"],
-    "counters": { "strong_against": ["smoke", "ice", "sand", "ghost"], "weak_against": ["dough", "leopard", "kitsune"] },
-    "optimalStats": { "primary": "melee", "secondary": "defense", "distribution": [40, 35, 0, 0, 25] }
+    "tags": [
+      "tankiness",
+      "aoe",
+      "transformation"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand",
+        "ghost"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "melee",
+      "secondary": "defense",
+      "distribution": [
+        40,
+        35,
+        0,
+        0,
+        25
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Mammoth_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "trex",
     "name": "T-Rex",
     "type": "Zoan",
     "tier": "A",
-    "tags": ["burst", "tankiness", "transformation"],
-    "counters": { "strong_against": ["smoke", "ice", "sand", "buddha"], "weak_against": ["dough", "leopard", "kitsune"] },
-    "optimalStats": { "primary": "melee", "secondary": "defense", "distribution": [45, 30, 0, 0, 25] }
+    "tags": [
+      "burst",
+      "tankiness",
+      "transformation"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand",
+        "buddha"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "melee",
+      "secondary": "defense",
+      "distribution": [
+        45,
+        30,
+        0,
+        0,
+        25
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/T_Rex_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "dough",
     "name": "Dough",
     "type": "Paramecia",
     "tier": "S",
-    "tags": ["mobility", "aoe", "combo", "awakened"],
-    "counters": { "strong_against": ["ice", "sand", "smoke", "light", "magma", "blizzard"], "weak_against": ["leopard", "shadow", "kitsune"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [25, 25, 0, 0, 50] }
+    "tags": [
+      "mobility",
+      "aoe",
+      "combo",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "ice",
+        "sand",
+        "smoke",
+        "light",
+        "magma",
+        "blizzard"
+      ],
+      "weak_against": [
+        "leopard",
+        "shadow",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        25,
+        25,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 5000000,
+      "robux": 9000,
+      "rarity": "Mythical"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Dough_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "shadow",
     "name": "Shadow",
     "type": "Paramecia",
     "tier": "S",
-    "tags": ["combo", "burst", "utility", "awakened"],
-    "counters": { "strong_against": ["dough", "ice", "light", "smoke"], "weak_against": ["venom", "spirit", "kitsune"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 15, 0, 0, 60] }
+    "tags": [
+      "combo",
+      "burst",
+      "utility",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "dough",
+        "ice",
+        "light",
+        "smoke"
+      ],
+      "weak_against": [
+        "venom",
+        "spirit",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        25,
+        15,
+        0,
+        0,
+        60
+      ]
+    },
+    "value": {
+      "money": 5000000,
+      "robux": 9000,
+      "rarity": "Mythical"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Shadow_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "venom",
     "name": "Venom",
     "type": "Paramecia",
     "tier": "S",
-    "tags": ["dot", "sustain", "aoe", "awakened"],
-    "counters": { "strong_against": ["shadow", "dragon", "buddha", "phoenix"], "weak_against": ["leopard", "blizzard", "kitsune"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
+    "tags": [
+      "dot",
+      "sustain",
+      "aoe",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "shadow",
+        "dragon",
+        "buddha",
+        "phoenix"
+      ],
+      "weak_against": [
+        "leopard",
+        "blizzard",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        20,
+        30,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 5000000,
+      "robux": 9000,
+      "rarity": "Mythical"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Venom_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "gas",
     "name": "Gas",
     "type": "Logia",
     "tier": "A",
-    "tags": ["dot", "aoe", "utility", "logia"],
-    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "spirit"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
+    "tags": [
+      "dot",
+      "aoe",
+      "utility",
+      "logia"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "spirit"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        20,
+        30,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Gas_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "spirit",
     "name": "Spirit",
     "type": "Paramecia",
     "tier": "S",
-    "tags": ["combo", "burst", "utility", "awakened"],
-    "counters": { "strong_against": ["leopard", "shadow", "lightning", "ghost"], "weak_against": ["dragon", "control", "kitsune"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 10, 0, 0, 60] }
+    "tags": [
+      "combo",
+      "burst",
+      "utility",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "leopard",
+        "shadow",
+        "lightning",
+        "ghost"
+      ],
+      "weak_against": [
+        "dragon",
+        "control",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        10,
+        0,
+        0,
+        60
+      ]
+    },
+    "value": {
+      "money": 5000000,
+      "robux": 9000,
+      "rarity": "Mythical"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Spirit_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "tiger",
     "name": "Tiger",
     "type": "Zoan",
     "tier": "A",
-    "tags": ["burst", "mobility", "transformation"],
-    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "kitsune"] },
-    "optimalStats": { "primary": "melee", "secondary": "fruit", "distribution": [40, 20, 0, 0, 40] }
+    "tags": [
+      "burst",
+      "mobility",
+      "transformation"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "sand"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "melee",
+      "secondary": "fruit",
+      "distribution": [
+        40,
+        20,
+        0,
+        0,
+        40
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Tiger_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "yeti",
     "name": "Yeti",
     "type": "Zoan",
     "tier": "A",
-    "tags": ["tankiness", "aoe", "transformation"],
-    "counters": { "strong_against": ["smoke", "ice", "flame"], "weak_against": ["dough", "leopard", "kitsune"] },
-    "optimalStats": { "primary": "melee", "secondary": "defense", "distribution": [40, 35, 0, 0, 25] }
+    "tags": [
+      "tankiness",
+      "aoe",
+      "transformation"
+    ],
+    "counters": {
+      "strong_against": [
+        "smoke",
+        "ice",
+        "flame"
+      ],
+      "weak_against": [
+        "dough",
+        "leopard",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "melee",
+      "secondary": "defense",
+      "distribution": [
+        40,
+        35,
+        0,
+        0,
+        25
+      ]
+    },
+    "value": {
+      "money": 1200000,
+      "robux": 2200,
+      "rarity": "Rare"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Yeti_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "kitsune",
     "name": "Kitsune",
     "type": "Zoan",
     "tier": "S",
-    "tags": ["mobility", "combo", "burst", "transformation"],
-    "counters": { "strong_against": ["dough", "shadow", "venom", "spirit", "leopard"], "weak_against": ["dragon", "buddha"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
+    "tags": [
+      "mobility",
+      "combo",
+      "burst",
+      "transformation"
+    ],
+    "counters": {
+      "strong_against": [
+        "dough",
+        "shadow",
+        "venom",
+        "spirit",
+        "leopard"
+      ],
+      "weak_against": [
+        "dragon",
+        "buddha"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        15,
+        0,
+        0,
+        55
+      ]
+    },
+    "value": {
+      "money": 5000000,
+      "robux": 9000,
+      "rarity": "Mythical"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Kitsune_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "control",
     "name": "Control",
     "type": "Paramecia",
     "tier": "S",
-    "tags": ["utility", "zoning", "combo", "awakened"],
-    "counters": { "strong_against": ["spirit", "quake", "lightning", "portal"], "weak_against": ["dragon", "leopard", "kitsune"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [15, 25, 0, 0, 60] }
+    "tags": [
+      "utility",
+      "zoning",
+      "combo",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "spirit",
+        "quake",
+        "lightning",
+        "portal"
+      ],
+      "weak_against": [
+        "dragon",
+        "leopard",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        15,
+        25,
+        0,
+        0,
+        60
+      ]
+    },
+    "value": {
+      "money": 5000000,
+      "robux": 9000,
+      "rarity": "Mythical"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Control_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "dragon",
     "name": "Dragon",
     "type": "Zoan",
     "tier": "S",
-    "tags": ["mobility", "aoe", "transformation", "tankiness", "awakened"],
-    "counters": { "strong_against": ["leopard", "spirit", "control", "kitsune"], "weak_against": ["buddha", "venom"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
+    "tags": [
+      "mobility",
+      "aoe",
+      "transformation",
+      "tankiness",
+      "awakened"
+    ],
+    "counters": {
+      "strong_against": [
+        "leopard",
+        "spirit",
+        "control",
+        "kitsune"
+      ],
+      "weak_against": [
+        "buddha",
+        "venom"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "defense",
+      "distribution": [
+        20,
+        30,
+        0,
+        0,
+        50
+      ]
+    },
+    "value": {
+      "money": 5000000,
+      "robux": 9000,
+      "rarity": "Mythical"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Dragon_Fruit.png/revision/latest?cb=20250913215446"
   },
   {
     "id": "leopard",
     "name": "Leopard",
     "type": "Zoan",
     "tier": "S",
-    "tags": ["mobility", "burst", "combo", "transformation"],
-    "counters": { "strong_against": ["dough", "buddha", "venom", "shadow"], "weak_against": ["dragon", "spirit", "kitsune"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 10, 0, 0, 60] }
+    "tags": [
+      "mobility",
+      "burst",
+      "combo",
+      "transformation"
+    ],
+    "counters": {
+      "strong_against": [
+        "dough",
+        "buddha",
+        "venom",
+        "shadow"
+      ],
+      "weak_against": [
+        "dragon",
+        "spirit",
+        "kitsune"
+      ]
+    },
+    "optimalStats": {
+      "primary": "fruit",
+      "secondary": "melee",
+      "distribution": [
+        30,
+        10,
+        0,
+        0,
+        60
+      ]
+    },
+    "value": {
+      "money": 5000000,
+      "robux": 9000,
+      "rarity": "Mythical"
+    },
+    "image": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/44/Leopard_Fruit.png/revision/latest?cb=20250913215446"
   }
 ]
