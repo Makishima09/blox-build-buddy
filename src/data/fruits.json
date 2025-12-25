@@ -1,29 +1,164 @@
 [
   {
-    "id": "dough",
-    "name": "Dough",
+    "id": "rocket",
+    "name": "Rocket",
     "type": "Paramecia",
-    "tier": "S",
-    "tags": ["mobility", "aoe", "combo", "awakened"],
-    "counters": { "strong_against": ["ice", "sand", "smoke", "barrier"], "weak_against": ["leopard", "shadow"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [25, 25, 0, 0, 50] }
+    "tier": "C",
+    "tags": ["mobility", "beginner_friendly"],
+    "counters": { "strong_against": ["spike", "bomb"], "weak_against": ["dough", "leopard", "dragon"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
   },
   {
-    "id": "leopard",
-    "name": "Leopard",
-    "type": "Zoan",
-    "tier": "S",
-    "tags": ["mobility", "burst", "combo", "transformation"],
-    "counters": { "strong_against": ["dough", "buddha", "venom"], "weak_against": ["dragon", "spirit"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 10, 0, 0, 60] }
+    "id": "spin",
+    "name": "Spin",
+    "type": "Paramecia",
+    "tier": "C",
+    "tags": ["utility", "beginner_friendly"],
+    "counters": { "strong_against": ["spike"], "weak_against": ["dough", "leopard", "buddha"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
   },
   {
-    "id": "dragon",
-    "name": "Dragon",
+    "id": "blade",
+    "name": "Blade",
+    "type": "Paramecia",
+    "tier": "C",
+    "tags": ["burst", "beginner_friendly"],
+    "counters": { "strong_against": ["spin", "rocket"], "weak_against": ["dough", "leopard", "buddha"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+  },
+  {
+    "id": "spring",
+    "name": "Spring",
+    "type": "Paramecia",
+    "tier": "C",
+    "tags": ["mobility", "beginner_friendly"],
+    "counters": { "strong_against": ["spin", "rocket"], "weak_against": ["dough", "leopard", "buddha"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+  },
+  {
+    "id": "bomb",
+    "name": "Bomb",
+    "type": "Paramecia",
+    "tier": "C",
+    "tags": ["burst", "aoe", "beginner_friendly"],
+    "counters": { "strong_against": ["spin", "spring"], "weak_against": ["dough", "leopard", "buddha", "smoke"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+  },
+  {
+    "id": "smoke",
+    "name": "Smoke",
+    "type": "Logia",
+    "tier": "C",
+    "tags": ["mobility", "utility", "beginner_friendly", "logia"],
+    "counters": { "strong_against": ["bomb", "spike", "spring"], "weak_against": ["dough", "blizzard", "light", "magma", "ice", "sand"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
+  },
+  {
+    "id": "spike",
+    "name": "Spike",
+    "type": "Paramecia",
+    "tier": "C",
+    "tags": ["defense", "beginner_friendly"],
+    "counters": { "strong_against": [], "weak_against": ["dough", "leopard", "buddha", "smoke"] },
+    "optimalStats": { "primary": "defense", "secondary": "fruit", "distribution": [20, 40, 0, 0, 40] }
+  },
+  {
+    "id": "flame",
+    "name": "Flame",
+    "type": "Logia",
+    "tier": "B",
+    "tags": ["burst", "aoe", "logia", "awakened"],
+    "counters": { "strong_against": ["ice", "smoke", "spike", "spring"], "weak_against": ["magma", "dough", "leopard"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 20, 0, 0, 55] }
+  },
+  {
+    "id": "ice",
+    "name": "Ice",
+    "type": "Logia",
+    "tier": "B",
+    "tags": ["zoning", "slow", "range", "logia", "awakened"],
+    "counters": { "strong_against": ["smoke", "spring", "spike"], "weak_against": ["dough", "magma", "lightning", "shadow", "flame"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [15, 30, 0, 0, 55] }
+  },
+  {
+    "id": "sand",
+    "name": "Sand",
+    "type": "Logia",
+    "tier": "B",
+    "tags": ["zoning", "aoe", "utility", "logia", "awakened"],
+    "counters": { "strong_against": ["smoke", "spring", "rubber"], "weak_against": ["dough", "blizzard", "light", "magma"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
+  },
+  {
+    "id": "dark",
+    "name": "Dark",
+    "type": "Logia",
+    "tier": "B",
+    "tags": ["combo", "utility", "logia", "awakened"],
+    "counters": { "strong_against": ["light", "smoke", "flame"], "weak_against": ["dough", "leopard", "dragon"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 15, 0, 0, 60] }
+  },
+  {
+    "id": "eagle",
+    "name": "Eagle",
     "type": "Zoan",
-    "tier": "S",
-    "tags": ["mobility", "aoe", "transformation", "tankiness"],
-    "counters": { "strong_against": ["leopard", "spirit", "control"], "weak_against": ["buddha", "venom"] },
+    "tier": "B",
+    "tags": ["mobility", "transformation", "utility"],
+    "counters": { "strong_against": ["smoke", "spike", "spring"], "weak_against": ["dough", "leopard", "dragon", "kitsune"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
+  },
+  {
+    "id": "diamond",
+    "name": "Diamond",
+    "type": "Paramecia",
+    "tier": "B",
+    "tags": ["defense", "tankiness"],
+    "counters": { "strong_against": ["smoke", "spike", "blade"], "weak_against": ["dough", "leopard", "venom", "quake"] },
+    "optimalStats": { "primary": "defense", "secondary": "melee", "distribution": [35, 40, 0, 0, 25] }
+  },
+  {
+    "id": "light",
+    "name": "Light",
+    "type": "Logia",
+    "tier": "A",
+    "tags": ["mobility", "burst", "range", "logia", "awakened"],
+    "counters": { "strong_against": ["blizzard", "smoke", "sand", "ice"], "weak_against": ["shadow", "portal", "dark"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 10, 0, 0, 65] }
+  },
+  {
+    "id": "rubber",
+    "name": "Rubber",
+    "type": "Paramecia",
+    "tier": "B",
+    "tags": ["mobility", "combo", "tankiness", "awakened"],
+    "counters": { "strong_against": ["lightning", "smoke", "spike"], "weak_against": ["buddha", "quake", "sand", "dough"] },
+    "optimalStats": { "primary": "melee", "secondary": "fruit", "distribution": [40, 20, 0, 0, 40] }
+  },
+  {
+    "id": "ghost",
+    "name": "Ghost",
+    "type": "Paramecia",
+    "tier": "A",
+    "tags": ["utility", "mobility", "combo"],
+    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "spirit"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
+  },
+  {
+    "id": "magma",
+    "name": "Magma",
+    "type": "Logia",
+    "tier": "A",
+    "tags": ["burst", "aoe", "dot", "logia", "awakened"],
+    "counters": { "strong_against": ["ice", "sand", "smoke", "flame"], "weak_against": ["portal", "lightning", "dough"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 25, 0, 0, 55] }
+  },
+  {
+    "id": "quake",
+    "name": "Quake",
+    "type": "Paramecia",
+    "tier": "A",
+    "tags": ["aoe", "burst", "stun", "awakened"],
+    "counters": { "strong_against": ["buddha", "diamond", "rubber"], "weak_against": ["control", "portal", "dough"] },
     "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
   },
   {
@@ -31,9 +166,126 @@
     "name": "Buddha",
     "type": "Zoan",
     "tier": "S",
-    "tags": ["tankiness", "aoe", "beginner_friendly", "transformation"],
-    "counters": { "strong_against": ["portal", "barrier", "rubber"], "weak_against": ["leopard", "dough"] },
+    "tags": ["tankiness", "aoe", "beginner_friendly", "transformation", "awakened"],
+    "counters": { "strong_against": ["portal", "rubber", "ghost"], "weak_against": ["leopard", "dough", "venom"] },
     "optimalStats": { "primary": "melee", "secondary": "defense", "distribution": [40, 30, 20, 0, 10] }
+  },
+  {
+    "id": "love",
+    "name": "Love",
+    "type": "Paramecia",
+    "tier": "A",
+    "tags": ["combo", "stun", "utility"],
+    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "buddha"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
+  },
+  {
+    "id": "creation",
+    "name": "Creation",
+    "type": "Paramecia",
+    "tier": "A",
+    "tags": ["utility", "zoning", "combo"],
+    "counters": { "strong_against": ["smoke", "ice", "ghost"], "weak_against": ["dough", "leopard", "kitsune"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 25, 0, 0, 55] }
+  },
+  {
+    "id": "spider",
+    "name": "Spider",
+    "type": "Paramecia",
+    "tier": "A",
+    "tags": ["combo", "utility", "stun"],
+    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "dragon"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
+  },
+  {
+    "id": "sound",
+    "name": "Sound",
+    "type": "Paramecia",
+    "tier": "A",
+    "tags": ["burst", "aoe", "stun", "awakened"],
+    "counters": { "strong_against": ["smoke", "ice", "sand", "ghost"], "weak_against": ["dough", "leopard", "dragon"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 20, 0, 0, 55] }
+  },
+  {
+    "id": "phoenix",
+    "name": "Phoenix",
+    "type": "Zoan",
+    "tier": "A",
+    "tags": ["mobility", "sustain", "transformation", "awakened"],
+    "counters": { "strong_against": ["ice", "sand", "ghost"], "weak_against": ["dough", "leopard", "venom"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
+  },
+  {
+    "id": "portal",
+    "name": "Portal",
+    "type": "Paramecia",
+    "tier": "A",
+    "tags": ["mobility", "utility", "combo", "awakened"],
+    "counters": { "strong_against": ["magma", "light", "ice", "quake"], "weak_against": ["buddha", "leopard", "dough"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 10, 0, 0, 60] }
+  },
+  {
+    "id": "lightning",
+    "name": "Lightning",
+    "type": "Logia",
+    "tier": "A",
+    "tags": ["mobility", "burst", "combo", "logia", "awakened"],
+    "counters": { "strong_against": ["ice", "sand", "magma", "smoke"], "weak_against": ["control", "spirit", "rubber", "dough"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 15, 0, 0, 60] }
+  },
+  {
+    "id": "pain",
+    "name": "Pain",
+    "type": "Paramecia",
+    "tier": "A",
+    "tags": ["burst", "combo", "utility"],
+    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "dragon", "spirit"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 20, 0, 0, 55] }
+  },
+  {
+    "id": "blizzard",
+    "name": "Blizzard",
+    "type": "Logia",
+    "tier": "A",
+    "tags": ["zoning", "slow", "aoe", "logia", "awakened"],
+    "counters": { "strong_against": ["venom", "sand", "smoke", "ice"], "weak_against": ["dough", "light", "magma"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [15, 30, 0, 0, 55] }
+  },
+  {
+    "id": "gravity",
+    "name": "Gravity",
+    "type": "Paramecia",
+    "tier": "A",
+    "tags": ["combo", "utility", "aoe", "awakened"],
+    "counters": { "strong_against": ["smoke", "ice", "sand", "ghost"], "weak_against": ["dough", "leopard", "dragon"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 25, 0, 0, 55] }
+  },
+  {
+    "id": "mammoth",
+    "name": "Mammoth",
+    "type": "Zoan",
+    "tier": "A",
+    "tags": ["tankiness", "aoe", "transformation"],
+    "counters": { "strong_against": ["smoke", "ice", "sand", "ghost"], "weak_against": ["dough", "leopard", "kitsune"] },
+    "optimalStats": { "primary": "melee", "secondary": "defense", "distribution": [40, 35, 0, 0, 25] }
+  },
+  {
+    "id": "trex",
+    "name": "T-Rex",
+    "type": "Zoan",
+    "tier": "A",
+    "tags": ["burst", "tankiness", "transformation"],
+    "counters": { "strong_against": ["smoke", "ice", "sand", "buddha"], "weak_against": ["dough", "leopard", "kitsune"] },
+    "optimalStats": { "primary": "melee", "secondary": "defense", "distribution": [45, 30, 0, 0, 25] }
+  },
+  {
+    "id": "dough",
+    "name": "Dough",
+    "type": "Paramecia",
+    "tier": "S",
+    "tags": ["mobility", "aoe", "combo", "awakened"],
+    "counters": { "strong_against": ["ice", "sand", "smoke", "light", "magma", "blizzard"], "weak_against": ["leopard", "shadow", "kitsune"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [25, 25, 0, 0, 50] }
   },
   {
     "id": "shadow",
@@ -41,7 +293,7 @@
     "type": "Paramecia",
     "tier": "S",
     "tags": ["combo", "burst", "utility", "awakened"],
-    "counters": { "strong_against": ["dough", "ice", "light"], "weak_against": ["venom", "spirit"] },
+    "counters": { "strong_against": ["dough", "ice", "light", "smoke"], "weak_against": ["venom", "spirit", "kitsune"] },
     "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 15, 0, 0, 60] }
   },
   {
@@ -50,7 +302,16 @@
     "type": "Paramecia",
     "tier": "S",
     "tags": ["dot", "sustain", "aoe", "awakened"],
-    "counters": { "strong_against": ["shadow", "dragon", "buddha"], "weak_against": ["leopard", "blizzard"] },
+    "counters": { "strong_against": ["shadow", "dragon", "buddha", "phoenix"], "weak_against": ["leopard", "blizzard", "kitsune"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
+  },
+  {
+    "id": "gas",
+    "name": "Gas",
+    "type": "Logia",
+    "tier": "A",
+    "tags": ["dot", "aoe", "utility", "logia"],
+    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "spirit"] },
     "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
   },
   {
@@ -58,125 +319,62 @@
     "name": "Spirit",
     "type": "Paramecia",
     "tier": "S",
-    "tags": ["combo", "burst", "utility"],
-    "counters": { "strong_against": ["leopard", "shadow", "rumble"], "weak_against": ["dragon", "control"] },
+    "tags": ["combo", "burst", "utility", "awakened"],
+    "counters": { "strong_against": ["leopard", "shadow", "lightning", "ghost"], "weak_against": ["dragon", "control", "kitsune"] },
     "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 10, 0, 0, 60] }
+  },
+  {
+    "id": "tiger",
+    "name": "Tiger",
+    "type": "Zoan",
+    "tier": "A",
+    "tags": ["burst", "mobility", "transformation"],
+    "counters": { "strong_against": ["smoke", "ice", "sand"], "weak_against": ["dough", "leopard", "kitsune"] },
+    "optimalStats": { "primary": "melee", "secondary": "fruit", "distribution": [40, 20, 0, 0, 40] }
+  },
+  {
+    "id": "yeti",
+    "name": "Yeti",
+    "type": "Zoan",
+    "tier": "A",
+    "tags": ["tankiness", "aoe", "transformation"],
+    "counters": { "strong_against": ["smoke", "ice", "flame"], "weak_against": ["dough", "leopard", "kitsune"] },
+    "optimalStats": { "primary": "melee", "secondary": "defense", "distribution": [40, 35, 0, 0, 25] }
+  },
+  {
+    "id": "kitsune",
+    "name": "Kitsune",
+    "type": "Zoan",
+    "tier": "S",
+    "tags": ["mobility", "combo", "burst", "transformation"],
+    "counters": { "strong_against": ["dough", "shadow", "venom", "spirit", "leopard"], "weak_against": ["dragon", "buddha"] },
+    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 15, 0, 0, 55] }
   },
   {
     "id": "control",
     "name": "Control",
     "type": "Paramecia",
-    "tier": "A",
-    "tags": ["utility", "zoning", "combo"],
-    "counters": { "strong_against": ["spirit", "quake", "rumble"], "weak_against": ["dragon", "leopard"] },
+    "tier": "S",
+    "tags": ["utility", "zoning", "combo", "awakened"],
+    "counters": { "strong_against": ["spirit", "quake", "lightning", "portal"], "weak_against": ["dragon", "leopard", "kitsune"] },
     "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [15, 25, 0, 0, 60] }
   },
   {
-    "id": "blizzard",
-    "name": "Blizzard",
-    "type": "Logia",
-    "tier": "A",
-    "tags": ["zoning", "slow", "aoe"],
-    "counters": { "strong_against": ["venom", "sand", "smoke"], "weak_against": ["dough", "light"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [15, 30, 0, 0, 55] }
+    "id": "dragon",
+    "name": "Dragon",
+    "type": "Zoan",
+    "tier": "S",
+    "tags": ["mobility", "aoe", "transformation", "tankiness", "awakened"],
+    "counters": { "strong_against": ["leopard", "spirit", "control", "kitsune"], "weak_against": ["buddha", "venom"] },
+    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
   },
   {
-    "id": "portal",
-    "name": "Portal",
-    "type": "Paramecia",
-    "tier": "A",
-    "tags": ["mobility", "utility", "combo"],
-    "counters": { "strong_against": ["magma", "light", "ice"], "weak_against": ["buddha", "leopard"] },
+    "id": "leopard",
+    "name": "Leopard",
+    "type": "Zoan",
+    "tier": "S",
+    "tags": ["mobility", "burst", "combo", "transformation"],
+    "counters": { "strong_against": ["dough", "buddha", "venom", "shadow"], "weak_against": ["dragon", "spirit", "kitsune"] },
     "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 10, 0, 0, 60] }
-  },
-  {
-    "id": "rumble",
-    "name": "Rumble",
-    "type": "Logia",
-    "tier": "A",
-    "tags": ["mobility", "burst", "combo"],
-    "counters": { "strong_against": ["ice", "sand", "magma"], "weak_against": ["control", "spirit"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 15, 0, 0, 60] }
-  },
-  {
-    "id": "quake",
-    "name": "Quake",
-    "type": "Paramecia",
-    "tier": "A",
-    "tags": ["aoe", "burst", "stun"],
-    "counters": { "strong_against": ["buddha", "barrier", "rubber"], "weak_against": ["control", "portal"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
-  },
-  {
-    "id": "light",
-    "name": "Light",
-    "type": "Logia",
-    "tier": "A",
-    "tags": ["mobility", "burst", "range"],
-    "counters": { "strong_against": ["blizzard", "smoke", "sand"], "weak_against": ["shadow", "portal"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [25, 10, 0, 0, 65] }
-  },
-  {
-    "id": "magma",
-    "name": "Magma",
-    "type": "Logia",
-    "tier": "A",
-    "tags": ["burst", "aoe", "dot"],
-    "counters": { "strong_against": ["ice", "sand", "smoke"], "weak_against": ["portal", "rumble"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 25, 0, 0, 55] }
-  },
-  {
-    "id": "ice",
-    "name": "Ice",
-    "type": "Logia",
-    "tier": "B",
-    "tags": ["zoning", "slow", "range"],
-    "counters": { "strong_against": ["smoke", "barrier", "chop"], "weak_against": ["dough", "magma", "rumble", "shadow"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [15, 30, 0, 0, 55] }
-  },
-  {
-    "id": "sand",
-    "name": "Sand",
-    "type": "Logia",
-    "tier": "B",
-    "tags": ["zoning", "aoe", "utility"],
-    "counters": { "strong_against": ["smoke", "barrier", "rubber"], "weak_against": ["dough", "blizzard", "light", "magma"] },
-    "optimalStats": { "primary": "fruit", "secondary": "defense", "distribution": [20, 30, 0, 0, 50] }
-  },
-  {
-    "id": "smoke",
-    "name": "Smoke",
-    "type": "Logia",
-    "tier": "C",
-    "tags": ["mobility", "utility", "beginner_friendly"],
-    "counters": { "strong_against": ["chop", "barrier"], "weak_against": ["dough", "blizzard", "light", "magma", "ice", "sand"] },
-    "optimalStats": { "primary": "fruit", "secondary": "melee", "distribution": [30, 20, 0, 0, 50] }
-  },
-  {
-    "id": "barrier",
-    "name": "Barrier",
-    "type": "Paramecia",
-    "tier": "C",
-    "tags": ["utility", "defense", "beginner_friendly"],
-    "counters": { "strong_against": ["chop"], "weak_against": ["dough", "buddha", "quake", "ice", "sand"] },
-    "optimalStats": { "primary": "defense", "secondary": "fruit", "distribution": [20, 40, 0, 0, 40] }
-  },
-  {
-    "id": "rubber",
-    "name": "Rubber",
-    "type": "Paramecia",
-    "tier": "B",
-    "tags": ["mobility", "combo", "tankiness"],
-    "counters": { "strong_against": ["chop", "smoke"], "weak_against": ["buddha", "quake", "sand"] },
-    "optimalStats": { "primary": "melee", "secondary": "fruit", "distribution": [40, 20, 0, 0, 40] }
-  },
-  {
-    "id": "chop",
-    "name": "Chop",
-    "type": "Paramecia",
-    "tier": "C",
-    "tags": ["utility", "beginner_friendly"],
-    "counters": { "strong_against": [], "weak_against": ["ice", "smoke", "barrier", "rubber"] },
-    "optimalStats": { "primary": "melee", "secondary": "defense", "distribution": [50, 30, 20, 0, 0] }
   }
 ]
