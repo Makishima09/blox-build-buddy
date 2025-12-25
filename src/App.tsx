@@ -8,6 +8,7 @@ import Simulator from "./pages/Simulator";
 import Optimizer from "./pages/Optimizer";
 import Fruits from "./pages/Fruits";
 import Trader from "./pages/Trader";
+import Gamepasses from "./pages/Gamepasses";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
               <Route path="/optimizer" element={<Optimizer />} />
               <Route path="/fruits" element={<Fruits />} />
               <Route path="/trader" element={<Trader />} />
+              <Route path="/gamepasses" element={<Gamepasses />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
       </BrowserRouter>

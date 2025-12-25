@@ -169,3 +169,14 @@ export interface TradeAnalysis {
     theirFruit: number;
   };
 }
+
+export interface Gamepass {
+  id: string;
+  name: string;
+  category: 'Currency' | 'Boost' | 'Utility' | 'Permanent Fruit';
+  cost: number; // Costo en Robux
+  description: string;
+  benefits: string[];
+  sea: '1st Sea' | '2nd Sea' | '3rd Sea' | 'All Seas';
+  image?: string; // URL de la imagen del gamepass
+}

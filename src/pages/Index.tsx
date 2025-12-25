@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Swords, Wrench, BookOpen, TrendingUp } from 'lucide-react';
+import { Swords, Wrench, BookOpen, TrendingUp, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { LanguageToggle } from '@/components/shared/LanguageToggle';
@@ -64,6 +64,12 @@ const Index = () => {
               {t('cta.trader')}
             </Link>
           </Button>
+          <Button asChild variant="outline" size="xl">
+            <Link to="/gamepasses">
+              <Gift className="w-5 h-5" />
+              {t('cta.gamepasses')}
+            </Link>
+          </Button>
         </motion.div>
 
         {/* Feature Cards */}
@@ -71,7 +77,7 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
+          className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto"
         >
           <Card className="text-left hover:border-primary/50 transition-all duration-300 hover:glow-primary">
             <CardHeader>
@@ -110,6 +116,16 @@ const Index = () => {
               </div>
               <CardTitle>{t('feature.trader.title')}</CardTitle>
               <CardDescription>{t('feature.trader.desc')}</CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="text-left hover:border-primary/50 transition-all duration-300 hover:glow-primary">
+            <CardHeader>
+              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-2">
+                <Gift className="w-6 h-6 text-primary" />
+              </div>
+              <CardTitle>{t('feature.gamepasses.title')}</CardTitle>
+              <CardDescription>{t('feature.gamepasses.desc')}</CardDescription>
             </CardHeader>
           </Card>
         </motion.div>

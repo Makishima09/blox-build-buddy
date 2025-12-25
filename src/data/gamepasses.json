@@ -1,0 +1,559 @@
+[
+  {
+    "id": "money_10k",
+    "name": "Money 10,000",
+    "category": "Currency",
+    "cost": 50,
+    "description": "Get 10,000 Money instantly",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "1st Sea"
+  },
+  {
+    "id": "money_50k",
+    "name": "Money 50,000",
+    "category": "Currency",
+    "cost": 250,
+    "description": "Get 50,000 Money instantly",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "1st Sea"
+  },
+  {
+    "id": "money_135k",
+    "name": "Money 135,000",
+    "category": "Currency",
+    "cost": 499,
+    "description": "Get 135,000 Money instantly",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "1st Sea"
+  },
+  {
+    "id": "money_300k",
+    "name": "Money 300,000",
+    "category": "Currency",
+    "cost": 999,
+    "description": "Get 300,000 Money instantly",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "1st Sea"
+  },
+  {
+    "id": "money_500k",
+    "name": "Money 500,000",
+    "category": "Currency",
+    "cost": 1499,
+    "description": "Get 500,000 Money instantly",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "1st Sea"
+  },
+  {
+    "id": "money_30k_2nd",
+    "name": "Money 30,000",
+    "category": "Currency",
+    "cost": 50,
+    "description": "Get 30,000 Money instantly (2nd Sea)",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "2nd Sea"
+  },
+  {
+    "id": "money_150k_2nd",
+    "name": "Money 150,000",
+    "category": "Currency",
+    "cost": 250,
+    "description": "Get 150,000 Money instantly (2nd Sea)",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "2nd Sea"
+  },
+  {
+    "id": "money_405k_2nd",
+    "name": "Money 405,000",
+    "category": "Currency",
+    "cost": 499,
+    "description": "Get 405,000 Money instantly (2nd Sea)",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "2nd Sea"
+  },
+  {
+    "id": "money_900k_2nd",
+    "name": "Money 900,000",
+    "category": "Currency",
+    "cost": 999,
+    "description": "Get 900,000 Money instantly (2nd Sea)",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "2nd Sea"
+  },
+  {
+    "id": "money_1.5m_2nd",
+    "name": "Money 1,500,000",
+    "category": "Currency",
+    "cost": 1499,
+    "description": "Get 1,500,000 Money instantly (2nd Sea)",
+    "benefits": [
+      "Instant money"
+    ],
+    "sea": "2nd Sea"
+  },
+  {
+    "id": "double_money",
+    "name": "2x Money",
+    "category": "Boost",
+    "cost": 450,
+    "description": "Permanently doubles all money earned from quests, bosses, and other sources",
+    "benefits": [
+      "2x Money from all sources",
+      "Permanent boost"
+    ],
+    "sea": "All Seas",
+    "image": "/gamepasses/BadgeMoneyx2.webp"
+  },
+  {
+    "id": "double_mastery",
+    "name": "2x Mastery",
+    "category": "Boost",
+    "cost": 1200,
+    "description": "Permanently doubles all mastery experience gained",
+    "benefits": [
+      "2x Mastery EXP",
+      "Permanent boost"
+    ],
+    "sea": "All Seas",
+    "image": "/gamepasses/BadgeMasteryx2.webp"
+  },
+  {
+    "id": "double_fragments",
+    "name": "2x Fragments",
+    "category": "Boost",
+    "cost": 1200,
+    "description": "Permanently doubles all fragments earned",
+    "benefits": [
+      "2x Fragments",
+      "Permanent boost"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "fast_boats",
+    "name": "Fast Boats",
+    "category": "Utility",
+    "cost": 450,
+    "description": "Increases boat speed significantly for faster sea travel",
+    "benefits": [
+      "Faster boat speed",
+      "Easier navigation"
+    ],
+    "sea": "All Seas",
+    "image": "/gamepasses/BadgeBoats.webp"
+  },
+  {
+    "id": "race_reroll",
+    "name": "Race Reroll",
+    "category": "Utility",
+    "cost": 90,
+    "description": "Allows you to reroll your race once",
+    "benefits": [
+      "One-time race change"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "respawn_bosses",
+    "name": "Respawn Bosses",
+    "category": "Utility",
+    "cost": 90,
+    "description": "Allows you to respawn bosses instantly",
+    "benefits": [
+      "Instant boss respawn",
+      "Faster farming"
+    ],
+    "sea": "All Seas",
+    "image": "/gamepasses/BadgeBossDrops.webp"
+  },
+  {
+    "id": "permanent_dragon",
+    "name": "Permanent Dragon",
+    "category": "Permanent Fruit",
+    "cost": 3000,
+    "description": "Grants permanent access to Dragon fruit",
+    "benefits": [
+      "Permanent Dragon fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_leopard",
+    "name": "Permanent Leopard",
+    "category": "Permanent Fruit",
+    "cost": 3000,
+    "description": "Grants permanent access to Leopard fruit",
+    "benefits": [
+      "Permanent Leopard fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_kitsune",
+    "name": "Permanent Kitsune",
+    "category": "Permanent Fruit",
+    "cost": 3000,
+    "description": "Grants permanent access to Kitsune fruit",
+    "benefits": [
+      "Permanent Kitsune fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_dough",
+    "name": "Permanent Dough",
+    "category": "Permanent Fruit",
+    "cost": 2400,
+    "description": "Grants permanent access to Dough fruit",
+    "benefits": [
+      "Permanent Dough fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_venom",
+    "name": "Permanent Venom",
+    "category": "Permanent Fruit",
+    "cost": 2400,
+    "description": "Grants permanent access to Venom fruit",
+    "benefits": [
+      "Permanent Venom fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_spirit",
+    "name": "Permanent Spirit",
+    "category": "Permanent Fruit",
+    "cost": 2400,
+    "description": "Grants permanent access to Spirit fruit",
+    "benefits": [
+      "Permanent Spirit fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_control",
+    "name": "Permanent Control",
+    "category": "Permanent Fruit",
+    "cost": 2400,
+    "description": "Grants permanent access to Control fruit",
+    "benefits": [
+      "Permanent Control fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_shadow",
+    "name": "Permanent Shadow",
+    "category": "Permanent Fruit",
+    "cost": 2400,
+    "description": "Grants permanent access to Shadow fruit",
+    "benefits": [
+      "Permanent Shadow fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_blizzard",
+    "name": "Permanent Blizzard",
+    "category": "Permanent Fruit",
+    "cost": 2400,
+    "description": "Grants permanent access to Blizzard fruit",
+    "benefits": [
+      "Permanent Blizzard fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_buddha",
+    "name": "Permanent Buddha",
+    "category": "Permanent Fruit",
+    "cost": 1200,
+    "description": "Grants permanent access to Buddha fruit",
+    "benefits": [
+      "Permanent Buddha fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_rumble",
+    "name": "Permanent Rumble",
+    "category": "Permanent Fruit",
+    "cost": 1200,
+    "description": "Grants permanent access to Rumble fruit",
+    "benefits": [
+      "Permanent Rumble fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_portal",
+    "name": "Permanent Portal",
+    "category": "Permanent Fruit",
+    "cost": 1200,
+    "description": "Grants permanent access to Portal fruit",
+    "benefits": [
+      "Permanent Portal fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_phoenix",
+    "name": "Permanent Phoenix",
+    "category": "Permanent Fruit",
+    "cost": 1200,
+    "description": "Grants permanent access to Phoenix fruit",
+    "benefits": [
+      "Permanent Phoenix fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_magma",
+    "name": "Permanent Magma",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Magma fruit",
+    "benefits": [
+      "Permanent Magma fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_light",
+    "name": "Permanent Light",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Light fruit",
+    "benefits": [
+      "Permanent Light fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_quake",
+    "name": "Permanent Quake",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Quake fruit",
+    "benefits": [
+      "Permanent Quake fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_string",
+    "name": "Permanent String",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to String fruit",
+    "benefits": [
+      "Permanent String fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_dark",
+    "name": "Permanent Dark",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Dark fruit",
+    "benefits": [
+      "Permanent Dark fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_ice",
+    "name": "Permanent Ice",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Ice fruit",
+    "benefits": [
+      "Permanent Ice fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_sand",
+    "name": "Permanent Sand",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Sand fruit",
+    "benefits": [
+      "Permanent Sand fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_barrier",
+    "name": "Permanent Barrier",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Barrier fruit",
+    "benefits": [
+      "Permanent Barrier fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_rubber",
+    "name": "Permanent Rubber",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Rubber fruit",
+    "benefits": [
+      "Permanent Rubber fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_flame",
+    "name": "Permanent Flame",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Flame fruit",
+    "benefits": [
+      "Permanent Flame fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_smoke",
+    "name": "Permanent Smoke",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Smoke fruit",
+    "benefits": [
+      "Permanent Smoke fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_spike",
+    "name": "Permanent Spike",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Spike fruit",
+    "benefits": [
+      "Permanent Spike fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_chop",
+    "name": "Permanent Chop",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Chop fruit",
+    "benefits": [
+      "Permanent Chop fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_spring",
+    "name": "Permanent Spring",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Spring fruit",
+    "benefits": [
+      "Permanent Spring fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_kilo",
+    "name": "Permanent Kilo",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Kilo fruit",
+    "benefits": [
+      "Permanent Kilo fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_spin",
+    "name": "Permanent Spin",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Spin fruit",
+    "benefits": [
+      "Permanent Spin fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_bomb",
+    "name": "Permanent Bomb",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Bomb fruit",
+    "benefits": [
+      "Permanent Bomb fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  },
+  {
+    "id": "permanent_rocket",
+    "name": "Permanent Rocket",
+    "category": "Permanent Fruit",
+    "cost": 400,
+    "description": "Grants permanent access to Rocket fruit",
+    "benefits": [
+      "Permanent Rocket fruit",
+      "No need to buy again"
+    ],
+    "sea": "All Seas"
+  }
+]
