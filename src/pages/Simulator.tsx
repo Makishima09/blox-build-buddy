@@ -10,6 +10,7 @@ import { Slider } from '@/components/ui/slider';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { FruitSelect } from '@/components/shared/FruitSelect';
 import { WeaponSelect } from '@/components/shared/WeaponSelect';
+import { RaceSelect } from '@/components/shared/RaceSelect';
 import { ScoreGauge } from '@/components/shared/ScoreGauge';
 import { ReasonList } from '@/components/shared/ReasonList';
 import { CounterList } from '@/components/shared/CounterList';
@@ -28,6 +29,7 @@ export default function Simulator() {
     weapon: '',
     gun: '',
     fightingStyle: '',
+    race: '',
     statFocus: 'balanced',
   });
 
@@ -37,6 +39,7 @@ export default function Simulator() {
     weapon: '',
     gun: '',
     fightingStyle: '',
+    race: '',
     statFocus: 'balanced',
   });
 
@@ -126,6 +129,7 @@ export default function Simulator() {
                   <div><Label>{t('simulator.weapon')} *</Label><WeaponSelect value={myBuild.weapon} onValueChange={(v) => setMyBuild({ ...myBuild, weapon: v })} category="Sword" placeholder={t('select.weapon')} /></div>
                   <div><Label>{t('simulator.gun')}</Label><WeaponSelect value={myBuild.gun || ''} onValueChange={(v) => setMyBuild({ ...myBuild, gun: v })} category="Gun" placeholder={t('select.gun')} /></div>
                   <div><Label>{t('simulator.style')}</Label><WeaponSelect value={myBuild.fightingStyle} onValueChange={(v) => setMyBuild({ ...myBuild, fightingStyle: v })} category="Fighting Style" placeholder={t('select.style')} /></div>
+                  <div><Label>{t('simulator.race')}</Label><RaceSelect value={myBuild.race || ''} onValueChange={(v) => setMyBuild({ ...myBuild, race: v })} placeholder={t('select.race')} /></div>
                   <div>
                     <Label>{t('simulator.stats')}</Label>
                     <RadioGroup value={myBuild.statFocus} onValueChange={(v: any) => setMyBuild({ ...myBuild, statFocus: v })} className="flex flex-wrap gap-4 mt-2">
@@ -166,6 +170,7 @@ export default function Simulator() {
                   <div><Label>{t('simulator.weapon')}</Label><WeaponSelect value={rivalBuild.weapon} onValueChange={(v) => setRivalBuild({ ...rivalBuild, weapon: v })} category="Sword" placeholder={t('select.weapon')} /></div>
                   <div><Label>{t('simulator.gun')}</Label><WeaponSelect value={rivalBuild.gun || ''} onValueChange={(v) => setRivalBuild({ ...rivalBuild, gun: v })} category="Gun" placeholder={t('select.gun')} /></div>
                   <div><Label>{t('simulator.style')}</Label><WeaponSelect value={rivalBuild.fightingStyle} onValueChange={(v) => setRivalBuild({ ...rivalBuild, fightingStyle: v })} category="Fighting Style" placeholder={t('select.style')} /></div>
+                  <div><Label>{t('simulator.race')}</Label><RaceSelect value={rivalBuild.race || ''} onValueChange={(v) => setRivalBuild({ ...rivalBuild, race: v })} placeholder={t('select.race')} /></div>
                 </CardContent>
               </Card>
 

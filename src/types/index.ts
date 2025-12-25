@@ -42,6 +42,7 @@ export interface Build {
   weapon: string;
   gun?: string;
   fightingStyle: string;
+  race?: string;
   statFocus: 'balanced' | 'melee' | 'fruit' | 'defense';
   playstyle?: 'aggressive' | 'zoner' | 'hitandrun' | 'tank';
 }

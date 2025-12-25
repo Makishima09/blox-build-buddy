@@ -1,0 +1,65 @@
+[
+  {
+    "id": "human",
+    "name": "Human",
+    "tier": "C",
+    "rarity": "common",
+    "tags": ["beginner", "basic"],
+    "passives": ["No passive abilities in V1"],
+    "pvpBonus": 0
+  },
+  {
+    "id": "rabbit",
+    "name": "Rabbit",
+    "tier": "B",
+    "rarity": "rare",
+    "tags": ["speed", "mobility"],
+    "passives": ["Increased speed", "Higher jumps"],
+    "pvpBonus": 5
+  },
+  {
+    "id": "shark",
+    "name": "Shark",
+    "tier": "B",
+    "rarity": "rare",
+    "tags": ["tank", "water"],
+    "passives": ["Swim faster", "Reduced water damage", "Health regen in water"],
+    "pvpBonus": 3
+  },
+  {
+    "id": "angel",
+    "name": "Angel",
+    "tier": "B",
+    "rarity": "rare",
+    "tags": ["regen", "utility"],
+    "passives": ["Faster health regeneration", "Sky jump"],
+    "pvpBonus": 4
+  },
+  {
+    "id": "ghoul",
+    "name": "Ghoul",
+    "tier": "A",
+    "rarity": "special",
+    "tags": ["lifesteal", "speed", "night"],
+    "passives": ["Life leech on hit", "Speed boost at night", "Enhanced jump"],
+    "pvpBonus": 8
+  },
+  {
+    "id": "cyborg",
+    "name": "Cyborg",
+    "tier": "A",
+    "rarity": "special",
+    "tags": ["energy", "defense", "burst"],
+    "passives": ["Energy regeneration", "Damage reduction", "Energy core explosion"],
+    "pvpBonus": 7
+  },
+  {
+    "id": "draco",
+    "name": "Draco",
+    "tier": "S",
+    "rarity": "legendary",
+    "tags": ["damage", "mobility", "fire"],
+    "passives": ["Increased damage", "Fire immunity", "Dragon flight"],
+    "pvpBonus": 10
+  }
+]
