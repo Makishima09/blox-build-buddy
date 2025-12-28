@@ -1,18 +1,39 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Swords, Wrench, BookOpen, TrendingUp, Gift } from 'lucide-react';
+import { Swords, Wrench, BookOpen, TrendingUp, Gift, LogIn, LogOut, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { LanguageToggle } from '@/components/shared/LanguageToggle';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useAuth } from '@/hooks/useAuth';
 
 const Index = () => {
   const { t } = useLanguage();
+  const { user, signOut } = useAuth();
 
   return (
     <div className="min-h-screen bg-background bg-hero-pattern">
       {/* Top Bar */}
-      <div className="container flex justify-end py-4">
+      <div className="container flex justify-end items-center gap-3 py-4">
+        {user ? (
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-muted-foreground flex items-center gap-2">
+              <User className="w-4 h-4" />
+              {user.email}
+            </span>
+            <Button variant="ghost" size="sm" onClick={signOut} className="gap-2">
+              <LogOut className="w-4 h-4" />
+              {t('auth.logout')}
+            </Button>
+          </div>
+        ) : (
+          <Link to="/auth">
+            <Button variant="ghost" size="sm" className="gap-2">
+              <LogIn className="w-4 h-4" />
+              {t('auth.login')}
+            </Button>
+          </Link>
+        )}
         <LanguageToggle />
       </div>
 

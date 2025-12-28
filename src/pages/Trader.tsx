@@ -5,6 +5,7 @@ import { ArrowLeft, RotateCcw, TrendingUp, Share2, CheckCircle2, AlertTriangle, 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { FruitSelect } from '@/components/shared/FruitSelect';
 import { FruitSlot } from '@/components/shared/FruitSlot';
