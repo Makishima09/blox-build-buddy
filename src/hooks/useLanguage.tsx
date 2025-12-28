@@ -266,6 +266,17 @@ const translations: Record<Language, Record<string, string>> = {
     'counter.impact': 'Impacto',
     // Common words
     'common.and': 'y',
+    // Navigation
+    'nav.back': 'Volver',
+    // Auth
+    'auth.title': 'Acceso a BloxTrader',
+    'auth.description': 'Inicia sesión o regístrate para guardar tus builds',
+    'auth.login': 'Iniciar Sesión',
+    'auth.register': 'Registrarse',
+    'auth.email': 'Email',
+    'auth.password': 'Contraseña',
+    'auth.password_hint': 'Mínimo 6 caracteres',
+    'auth.logout': 'Cerrar Sesión',
   },
   en: {
     // Index
@@ -524,6 +535,17 @@ const translations: Record<Language, Record<string, string>> = {
     'counter.impact': 'Impact',
     // Common words
     'common.and': 'and',
+    // Navigation
+    'nav.back': 'Back',
+    // Auth
+    'auth.title': 'Access BloxTrader',
+    'auth.description': 'Sign in or register to save your builds',
+    'auth.login': 'Sign In',
+    'auth.register': 'Sign Up',
+    'auth.email': 'Email',
+    'auth.password': 'Password',
+    'auth.password_hint': 'Minimum 6 characters',
+    'auth.logout': 'Sign Out',
   },
 };
 
